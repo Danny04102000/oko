@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@import url("/assets/fonts/SpaceGrotesk-Bold.ttf");
+@import url("/assets/fonts/SpaceGrotesk-Medium.ttf");
+@import url("/assets/fonts/SpaceGrotesk-Regular.ttf");
+@import url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
 .theme1 {
   --background-theme: #D9F1EE;
   --color-theme: #00A08E;
@@ -1008,12 +1012,26 @@ body {
   width: 1px;
 }
 
+@font-face {
+  font-family: "SpaceGrotesk";
+  src: url("/fonts/SpaceGrotesk-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
 .inner {
   max-width: 1820px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.font-raleway {
+  font-family: "Raleway", sans-serif;
+}
+
+.font-space-grotesk-b {
+  font-family: "SpaceGrotesk", sans-serif;
 }
 
 .bg-top {
@@ -1029,18 +1047,20 @@ body {
   margin: 0 auto;
 }
 .b-adventure__banner {
-  text-align: center;
+  width: 58%;
+  margin: 0 auto;
 }
 .b-adventure__banner img {
+  width: 100%;
   vertical-align: middle;
 }
 .b-adventure__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: -6.5%;
-  padding: 9% 10% 2%;
-  background: url(/assets/img/img_banner.svg) no-repeat center;
+  margin-top: -7%;
+  padding: 10% 10% 2%;
+  background: url("/assets/img/img_banner.svg") no-repeat center;
   background-size: contain;
 }
 .b-adventure__info--image {
@@ -1071,9 +1091,32 @@ body {
   width: 33px;
   height: 33px;
 }
-.b-adventure__info--image__insert {
+.b-adventure__info--box {
+  width: 50%;
+  padding: 0 2%;
+}
+.b-adventure__info--name {
+  margin-bottom: 4%;
+  color: #FFAB0E;
+  font-size: min(42px, 3.2vw);
+  font-family: "SpaceGrotesk", sans-serif;
+  font-weight: bold;
+}
+.b-adventure__info--point {
+  display: flex;
+  align-items: center;
+  color: #FFE5B9;
+  font-size: min(67px, 4.3vw);
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+}
+.b-adventure__info .icon-star {
+  margin-right: 10px;
+  width: 21%;
+}
+.b-adventure__insert {
   width: 23%;
 }
-.b-adventure__info--image__insert img {
+.b-adventure__insert img {
+  width: 100%;
   vertical-align: middle;
 }/*# sourceMappingURL=style.min.css.map */
