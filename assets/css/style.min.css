@@ -1017,22 +1017,100 @@ body {
 }
 
 .bg-top {
+  padding-top: 70px;
   background: url("/assets/img/bg.jpg") no-repeat top 0 left 0;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 300vh;
 }
 
-.b-register__form {
-  background: url(/assets/img/bg_register.png) no-repeat center center;
+.b-adventure {
+  width: 81%;
+  margin: 0 auto;
+}
+.b-adventure__banner {
+  text-align: center;
+}
+.b-adventure__banner img {
+  vertical-align: middle;
+}
+.b-adventure__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -6.5%;
+  padding: 9% 10% 2%;
+  background: url(/assets/img/img_banner.svg) no-repeat center;
   background-size: contain;
+}
+.b-adventure__info--image {
+  position: relative;
+  width: 26%;
+  padding-bottom: 30%;
+  background-color: #FFDFA0;
+  transform: skewY(-2deg);
+}
+.b-adventure__info--image .img-people {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.b-adventure__info--image .img-people img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.b-adventure__info--image .icon-pin {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 33px;
+  height: 33px;
+}
+.b-adventure__info--image__insert {
+  width: 23%;
+}
+.b-adventure__info--image__insert img {
+  vertical-align: middle;
+}
+
+.b-register {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-register__form {
+  position: relative;
+  z-index: 3;
+  max-width: 70.8%;
+  width: 100%;
+  background: url(/assets/img/bg_register.png) no-repeat center center;
+  background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 68px 106px 290px;
+  padding: 6% 5.5% 15%;
+}
+.b-register__form::before {
+  position: absolute;
+  content: "";
+  width: 102.8%;
+  height: 14.8%;
+  background: url(/assets/img/icon_tree.png) no-repeat center center;
+  background-size: contain;
+  top: -115px;
+  left: 0;
+  transform: translateY(-46%);
+  animation: scaleAnim 1.5s infinite;
 }
 .b-register__ttl {
-  font-size: 75px;
+  font-size: min(75px, 4vw);
   color: #FFAB0E;
   line-height: 1.2;
   margin-bottom: 25px;
@@ -1042,7 +1120,7 @@ body {
   text-align: center;
 }
 .b-register__time > p {
-  font-size: 27px;
+  font-size: min(27px, 1.5vw);
   font-weight: bold;
   color: #7A3114;
   margin-bottom: 15px;
@@ -1050,6 +1128,8 @@ body {
 .b-register__time .wrap {
   display: flex;
   justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
 }
 .b-register__time .day,
 .b-register__time .hour,
@@ -1057,4 +1137,169 @@ body {
 .b-register__time .sec {
   display: flex;
   flex-direction: column;
+  font-size: min(130px, 7vw);
+  color: #7A3114;
+}
+.b-register__time .day > span,
+.b-register__time .hour > span,
+.b-register__time .min > span,
+.b-register__time .sec > span {
+  font-size: min(27px, 1.5vw);
+}
+.b-register__time .day,
+.b-register__time .hour,
+.b-register__time .min {
+  position: relative;
+  padding-right: 60px;
+}
+.b-register__time .day::after,
+.b-register__time .hour::after,
+.b-register__time .min::after {
+  position: absolute;
+  content: ":";
+  font-size: min(130px, 7vw);
+  color: #7A3114;
+  right: 0;
+  top: 0;
+}
+.b-register__time .day {
+  align-items: flex-start;
+}
+.b-register__time .hour,
+.b-register__time .min {
+  align-items: center;
+}
+.b-register__time .sec {
+  align-items: flex-end;
+}
+.b-register__input {
+  max-width: 1022px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 115px;
+}
+.b-register__input input {
+  width: 100%;
+  height: 80px;
+  padding: 19px 41px;
+  font-size: 36px;
+  color: #FFF7D7;
+  border: 1px solid #872300;
+  border-radius: 14px;
+  outline: none;
+  transition: 0.3s;
+  background-color: #CF5C2B;
+  font-weight: bold;
+}
+.b-register__input input::-moz-placeholder {
+  color: #FFF7D7;
+}
+.b-register__input input::placeholder {
+  color: #FFF7D7;
+}
+.b-register__row {
+  display: flex;
+  gap: 70px;
+}
+.b-register__col {
+  width: 100%;
+}
+.b-register__submit {
+  background: url(/assets/img/bg_button.png) no-repeat center center;
+  background-size: contain;
+  max-width: 620px;
+  height: 91px;
+  width: 100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-weight: bold;
+  color: #FFF7D7;
+  margin-bottom: 34px;
+}
+.b-register__submit span {
+  position: relative;
+  padding-right: 30px;
+}
+.b-register__submit span::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background: url(/assets/img/icon_arrow.png) no-repeat center center;
+  top: 50%;
+  right: 0;
+  transform: translateY(-30%);
+}
+.b-register__privacy {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.b-register__privacy p {
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+}
+.b-register__checkbox input {
+  display: none;
+}
+.b-register__checkbox label {
+  position: relative;
+  display: inline-block;
+  width: 33px;
+  height: 31px;
+  cursor: pointer;
+  background: url(/assets/img/bg_checkbox.png) no-repeat center center;
+  background-size: contain;
+}
+.b-register__checkbox input:checked + label::before {
+  content: "";
+  position: absolute;
+  width: 41px;
+  height: 37px;
+  background: url(/assets/img/icon_check.png) no-repeat center center;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-60%);
+}
+.b-register__grass {
+  position: absolute;
+  z-index: 4;
+  bottom: -42px;
+  right: -100px;
+  width: 603px;
+  height: 344px;
+  background: url(/assets/img/icon_grass.png) no-repeat center center;
+  background-size: contain;
+  animation: scaleAnim 1.5s infinite;
+}
+.b-register__beach {
+  position: absolute;
+  content: "";
+  z-index: 1;
+  bottom: -5%;
+  left: 0;
+  width: 1699px;
+  height: 204px;
+  background: url(/assets/img/icon_beach.png) no-repeat center center;
+  background-size: contain;
+}
+@keyframes scaleAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.min.css.map */
