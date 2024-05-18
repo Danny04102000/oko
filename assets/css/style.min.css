@@ -1212,6 +1212,17 @@ body {
   }
 }
 
+@keyframes scaleAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .b-register {
   position: relative;
   z-index: 3;
@@ -1238,13 +1249,13 @@ body {
   height: 14.8%;
   background: url(/assets/img/icon_tree.png) no-repeat center center;
   background-size: contain;
-  top: -115px;
+  top: -6.8%;
   left: 0;
-  transform: translateY(-46%);
   animation: scaleAnim 1.5s infinite;
 }
 .b-register__ttl {
   font-size: min(75px, 4vw);
+  font-family: "SVN-Bango", sans-serif;
   color: #FFAB0E;
   line-height: 1.2;
   margin-bottom: 25px;
@@ -1262,8 +1273,8 @@ body {
 .b-register__time .wrap {
   display: flex;
   justify-content: center;
-  gap: 60px;
-  margin-bottom: 80px;
+  gap: min(60px, 3.5vw);
+  margin-bottom: min(80px, 4.5vw);
 }
 .b-register__time .day,
 .b-register__time .hour,
@@ -1271,30 +1282,35 @@ body {
 .b-register__time .sec {
   display: flex;
   flex-direction: column;
-  font-size: min(130px, 7vw);
+  font-size: min(130px, 6vw);
   color: #7A3114;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
 }
 .b-register__time .day > span,
 .b-register__time .hour > span,
 .b-register__time .min > span,
 .b-register__time .sec > span {
   font-size: min(27px, 1.5vw);
+  color: #7A3114;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
 .b-register__time .day,
 .b-register__time .hour,
 .b-register__time .min {
   position: relative;
-  padding-right: 60px;
+  padding-right: 6.8%;
 }
 .b-register__time .day::after,
 .b-register__time .hour::after,
 .b-register__time .min::after {
   position: absolute;
   content: ":";
-  font-size: min(130px, 7vw);
+  font-size: min(130px, 6vw);
   color: #7A3114;
   right: 0;
   top: 0;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
 }
 .b-register__time .day {
   align-items: flex-start;
@@ -1312,13 +1328,13 @@ body {
   width: 100%;
   flex-direction: column;
   gap: 32px;
-  margin-bottom: 115px;
+  margin-bottom: min(115px, 6.5vw);
 }
 .b-register__input input {
   width: 100%;
   height: 80px;
   padding: 19px 41px;
-  font-size: 36px;
+  font-size: min(30px, 2.5vw);
   color: #FFF7D7;
   border: 1px solid #872300;
   border-radius: 14px;
@@ -1335,7 +1351,7 @@ body {
 }
 .b-register__row {
   display: flex;
-  gap: 70px;
+  gap: min(70px, 4vw);
 }
 .b-register__col {
   width: 100%;
@@ -1343,22 +1359,22 @@ body {
 .b-register__submit {
   background: url(/assets/img/bg_button.png) no-repeat center center;
   background-size: contain;
-  max-width: 620px;
-  height: 91px;
+  max-width: min(620px, 35vw);
+  height: min(91px, 5vw);
   width: 100%;
   outline: none;
   border: none;
   cursor: pointer;
-  font-size: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   font-weight: bold;
-  color: #FFF7D7;
   margin-bottom: 34px;
 }
 .b-register__submit span {
+  font-size: min(38px, 2.5vw);
+  color: #FFF7D7;
   position: relative;
   padding-right: 30px;
 }
@@ -1368,6 +1384,7 @@ body {
   width: 18px;
   height: 18px;
   background: url(/assets/img/icon_arrow.png) no-repeat center center;
+  background-size: 100% 100%;
   top: 50%;
   right: 0;
   transform: translateY(-30%);
@@ -1378,9 +1395,14 @@ body {
   margin-bottom: 20px;
 }
 .b-register__privacy p {
-  font-size: 26px;
+  font-size: min(26px, 1.3vw);
   font-weight: bold;
   color: #000000;
+}
+.b-register__checkbox {
+  line-height: 0;
+  font-size: 0;
+  letter-spacing: 0;
 }
 .b-register__checkbox input {
   display: none;
@@ -1400,6 +1422,7 @@ body {
   width: 41px;
   height: 37px;
   background: url(/assets/img/icon_check.png) no-repeat center center;
+  background-size: 100% 100%;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-60%);
@@ -1407,10 +1430,10 @@ body {
 .b-register__grass {
   position: absolute;
   z-index: 4;
-  bottom: -42px;
-  right: -100px;
-  width: 603px;
-  height: 344px;
+  bottom: -2.5%;
+  right: -8%;
+  width: 48.4%;
+  height: 20.04%;
   background: url(/assets/img/icon_grass.png) no-repeat center center;
   background-size: contain;
   animation: scaleAnim 1.5s infinite;
@@ -1420,20 +1443,38 @@ body {
   content: "";
   z-index: 1;
   bottom: -5%;
-  left: 0;
-  width: 1699px;
-  height: 204px;
+  left: 1%;
+  width: 96.6%;
+  height: 12%;
   background: url(/assets/img/icon_beach.png) no-repeat center center;
   background-size: contain;
 }
-@keyframes scaleAnim {
-  0% {
-    transform: scale(1);
+@media screen and (max-width: 768px) {
+  .b-register__input {
+    gap: 20px;
   }
-  50% {
-    transform: scale(1.1);
+  .b-register__input input {
+    height: 60px;
+    padding: 10px 15px;
+    font-size: 20px;
   }
-  100% {
-    transform: scale(1);
+  .b-register__submit {
+    padding: 10px;
+  }
+  .b-register__submit span {
+    font-size: 20px;
+    padding-right: 15px;
+  }
+  .b-register__submit span::after {
+    width: 10px;
+    height: 10px;
+  }
+  .b-register__checkbox label {
+    width: 25px;
+    height: 24px;
+  }
+  .b-register__checkbox input:checked + label::before {
+    width: 30px;
+    height: 27px;
   }
 }/*# sourceMappingURL=style.min.css.map */
