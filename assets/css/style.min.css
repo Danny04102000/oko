@@ -1358,7 +1358,7 @@ body {
 }
 .b-register__submit {
   background: url(/assets/img/bg_button.png) no-repeat center center;
-  background-size: contain;
+  background-size: 100% 100%;
   max-width: min(620px, 35vw);
   height: min(91px, 5vw);
   width: 100%;
@@ -1432,37 +1432,75 @@ body {
   z-index: 4;
   bottom: -2.5%;
   right: -8%;
-  width: 48.4%;
-  height: 20.04%;
-  background: url(/assets/img/icon_grass.png) no-repeat center center;
-  background-size: contain;
+  width: min(552px, 30vw);
   animation: scaleAnim 1.5s infinite;
+}
+.b-register__grass img {
+  width: 100%;
+  height: auto;
 }
 .b-register__beach {
   position: absolute;
   content: "";
   z-index: 1;
-  bottom: -5%;
+  bottom: -6vw;
+  width: min(1699px, 96.9vw);
   left: 1%;
-  width: 96.6%;
-  height: 12%;
-  background: url(/assets/img/icon_beach.png) no-repeat center center;
-  background-size: contain;
+}
+.b-register__beach img {
+  width: 100%;
+  height: auto;
 }
 @media screen and (max-width: 768px) {
+  .b-register__form {
+    max-width: 90%;
+    padding-top: 10%;
+    padding-bottom: 20%;
+  }
+  .b-register__ttl {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .b-register__time > p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .b-register__time .wrap {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .b-register__time .day::after,
+  .b-register__time .hour::after,
+  .b-register__time .min::after {
+    font-size: 40px;
+  }
+  .b-register__time .day,
+  .b-register__time .hour,
+  .b-register__time .min,
+  .b-register__time .sec {
+    font-size: 40px;
+  }
+  .b-register__time .day > span,
+  .b-register__time .hour > span,
+  .b-register__time .min > span,
+  .b-register__time .sec > span {
+    font-size: 14px;
+  }
   .b-register__input {
     gap: 20px;
   }
   .b-register__input input {
-    height: 60px;
-    padding: 10px 15px;
-    font-size: 20px;
+    height: 45px;
+    padding: 10px;
+    font-size: 14px;
   }
   .b-register__submit {
+    max-width: 100%;
+    height: 45px;
     padding: 10px;
   }
   .b-register__submit span {
-    font-size: 20px;
+    font-size: 14px;
     padding-right: 15px;
   }
   .b-register__submit span::after {
@@ -1476,5 +1514,16 @@ body {
   .b-register__checkbox input:checked + label::before {
     width: 30px;
     height: 27px;
+  }
+  .b-register__grass {
+    bottom: 0;
+    right: 0;
+  }
+  .b-register__beach {
+    left: 0;
+    width: 100%;
+  }
+  .b-register__privacy p {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=style.min.css.map */
