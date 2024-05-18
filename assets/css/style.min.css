@@ -1025,6 +1025,11 @@ body {
   margin: 0 auto;
   padding: 0 30px;
 }
+@media only screen and (max-width: 768px) {
+  .inner {
+    padding: 0 15px;
+  }
+}
 
 .font-raleway {
   font-family: "Raleway", sans-serif;
@@ -1042,9 +1047,13 @@ body {
   height: 300vh;
 }
 
+.sec-cmn {
+  margin-bottom: 50px;
+}
+
 .b-adventure {
   width: 81%;
-  margin: 0 auto;
+  margin: 0 auto 55px;
 }
 .b-adventure__banner {
   width: 58%;
@@ -1086,10 +1095,10 @@ body {
 }
 .b-adventure__info--image .icon-pin {
   position: absolute;
-  top: 10px;
+  top: 5%;
   right: 5px;
-  width: 33px;
-  height: 33px;
+  width: 14%;
+  height: 13%;
 }
 .b-adventure__info--box {
   width: 50%;
@@ -1119,6 +1128,88 @@ body {
 .b-adventure__insert img {
   width: 100%;
   vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+  .b-adventure {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+  .b-adventure__info {
+    margin-top: -7%;
+    padding: 10% 10% 2%;
+  }
+  .b-adventure__info--image {
+    width: 26%;
+    padding-bottom: 30%;
+  }
+  .b-adventure__info--image .img-people {
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+  }
+  .b-adventure__info--image .icon-pin {
+    position: absolute;
+    top: 5%;
+    right: 5px;
+    width: 14%;
+    height: 13%;
+  }
+  .b-adventure__info--box {
+    width: 50%;
+    padding: 0 2%;
+  }
+  .b-adventure__info--name {
+    font-size: min(21px, 3.5vw);
+  }
+  .b-adventure__info--point {
+    display: flex;
+    align-items: center;
+    color: #FFE5B9;
+    font-size: min(67px, 4.3vw);
+    font-family: "SpaceGrotesk-Bold", sans-serif;
+  }
+  .b-adventure__info .icon-star {
+    margin-right: 10px;
+    width: 21%;
+  }
+  .b-adventure__insert {
+    width: 23%;
+  }
+  .b-adventure__insert img {
+    width: 100%;
+    vertical-align: middle;
+  }
+}
+
+.headline-1 {
+  margin-bottom: 10px;
+  color: #FFAB0E;
+  font-size: 48px;
+  line-height: 1.3;
+  font-weight: bold;
+  font-family: "SpaceGrotesk", sans-serif;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  .headline-1 {
+    font-size: 24px;
+  }
+}
+
+.txt-cmn {
+  margin-bottom: 20px;
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 1.7;
+}
+.txt-date {
+  color: #FFF993;
+  font-size: 40px;
+  font-weight: bold;
+}
+@media only screen and (max-width: 768px) {
+  .txt-cmn {
+    font-size: 14px;
+  }
 }
 
 .b-register {
