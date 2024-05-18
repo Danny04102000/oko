@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+/**
+ * Set up a decent box model on the root element
+ */
+html {
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    background: image("common/img_wrapper.jpg") no-repeat center bottom;
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 10px;
+
+    &::after {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        width: calc((100% - 600px) / 2);
+        height: 96vh;
+        background: image("common/img_logo2.svg") no-repeat left calc(50% + 4px) center;
+        content: '';
+    }
+
+    @include media-down(1340) {
+        &::after {
+            background-size: 85%;
+        }
+    }
+
+    @include media-down(sp) {
+        background: #FFF;
+
+        &::after {
+            display: none;
+        }
+    }
+}
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    word-wrap: break-word;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+    text-decoration: none;
+}

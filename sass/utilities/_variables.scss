@@ -1,0 +1,146 @@
+@charset "UTF-8";
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Theme
+
+.theme1 {
+    --background-theme: #D9F1EE;
+    --color-theme: #00A08E;
+    --color-title-theme: #00A08E;
+    --background-icon: #00A08E;
+    --background-btn: #00A08E;
+    --color-btn-1: #D9F1EE;
+    --color-btn-2: #00A08E;
+    --background-link: #E7F1F8;
+    --bg-about: #D9F1EE;
+    --icon-about: #00A08E;
+}
+
+.theme2 {
+    --background-theme: #E7F1F8;
+    --color-theme: #01A3C1;
+    --color-title-theme: #01A3C1;
+    --background-icon: #01A3C1;
+    --background-link: #E7F1F8;
+    --title-keyv: #fff;
+    --bg-about: #E7F1F8;
+    --icon-about: #01A3C1;
+}
+
+.theme3 {
+    --background-theme: #FFFBEA;
+    --color-theme: #EA884F;
+    --color-title-theme: #EA884F;
+    --background-icon: #EA884F;
+    --background-btn: #FAA327;
+    --color-btn-1: #FFEED8;
+    --color-btn-2: #EA8850;
+    --background-link: #E7F1F8;
+    --bg-about: #E7F1F8;
+    --icon-about: #EA884F;
+    
+}
+
+.theme4 {
+    --background-theme: #FFFBEA;
+    --color-theme: #9B7700;
+    --color-title-theme: #EA8850;
+    --background-icon: #FFCE2F;
+    --background-btn: #9B7700;
+    --color-btn-1: #FFF5D5;
+    --color-btn-2: #FFCE2F;
+    --background-link: #FFF5D5;
+    --title-keyv: #523F03;
+    --bg-about: #FFF5D5;
+    --icon-about: #9B7700;
+}
+
+/// Regular font family
+/// @type List
+$text-font-stack: ヒラギノ角ゴシック Pro,
+    Hiragino Kaku Gothic Pro,
+    メイリオ,
+    Meiryo,
+    Osaka,
+    ＭＳ Ｐゴシック,
+    MS PGothic,
+    Verdana,
+    Arial,
+    sans-serif !default;
+
+$font-roboto: 'Roboto', sans-serif;
+
+/// Text color
+/// @type Color
+$text-color: #2D2D2D !default;
+
+/// Link color
+/// @type Color
+$link-color: #36C !default;
+
+/// All other color
+/// @type Color
+$color-primary: #008E72 !default;
+$color-secondary: lighten($color-primary, 10%) !default;
+$color-orange: #EA8850 !default;
+
+$color-success: green !default;
+$color-warning: yellow !default;
+$color-error: #e5004f !default;
+$color-black: #000 !default;
+$color-white: #FFF !default;
+
+$color-text: #000000 !default;
+$color-txt-orange: #F7B433 !default;
+$color-green: #00A08E;
+$color-green02: #F4FAF9;
+$color-yellow: #FFFBF0;
+$color-yellow02: #EA8850;
+$color-text-bold: #2D2D2D !default;
+
+// Hover
+$color-primary-hover: lighten($color-primary, 30%) !default;
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1240px !default;
+
+/// Spacing on the left and the right
+/// @type Length
+$grid-gutter-width: 20px;
+$grid-gutter-width-sp: 15px;
+
+// Section spacing
+$section-spacing: 30px;
+$section-spacing-sp: calc($section-spacing / 2);
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$point-up: (
+    xs: 375.1px,
+    sm: 576.1px,
+    sp: 768.1px,
+    md: 768.1px,
+    lg: 992.1px,
+    xl: 1200.1px) !default;
+$point-down: (
+    xss: 320px,
+    xs: 375px,
+    sm: 576px,
+    sp: 768px,
+    md: 992px,
+    lg: 1200px) !default;
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+/// $base-url: 'http://cdn.example.com/assets/';
+$base-url: '../../assets/' !default;
+
+$transition-duration: .3s !default;

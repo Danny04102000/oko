@@ -1,0 +1,30 @@
+// -----------------------------------------------------------------------------
+// Breakpoint Mixins
+// -----------------------------------------------------------------------------
+@mixin media-down($media) {
+    @if(map-has-key($point-down, $media)) {
+        @media only screen and (max-width: map-get($point-down, $media)) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (max-width: $media + 'px') {
+            @content;
+        }
+    }
+}
+
+@mixin media-up($media) {
+    @if(map-has-key($point-up, $media)) {
+        @media only screen and (min-width: map-get($point-up, $media)) {
+            @content;
+        }
+    }
+
+    @else {
+        @media only screen and (min-width: $media + 'px') {
+            @content;
+        }
+    }
+}
