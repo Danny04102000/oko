@@ -1180,6 +1180,21 @@ body {
   }
 }
 
+.box-time {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  width: 63%;
+}
+.box-time span {
+  position: absolute;
+  top: 36%;
+  right: 10%;
+  color: #fff;
+  font-size: min(100px, 6.3vw);
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+}
+
 .headline-1 {
   margin-bottom: 10px;
   color: #FFAB0E;
@@ -1209,6 +1224,9 @@ body {
 @media only screen and (max-width: 768px) {
   .txt-cmn {
     font-size: 14px;
+  }
+  .txt-date {
+    font-size: 20px;
   }
 }
 
@@ -1445,7 +1463,6 @@ body {
   z-index: 1;
   bottom: -6vw;
   width: min(1699px, 96.9vw);
-  left: 1%;
 }
 .b-register__beach img {
   width: 100%;
