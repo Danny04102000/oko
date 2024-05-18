@@ -143,7 +143,7 @@
 
     &__submit {
         background: url(/assets/img/bg_button.png) no-repeat center center;
-        background-size: contain;
+        background-size: 100% 100%;
         max-width: min(620px, 35vw);
         height: min(91px, 5vw);
         width: 100%;
@@ -226,42 +226,89 @@
         z-index: 4;
         bottom: -2.5%;
         right: -8%;
-        width: 48.4%;
-        height: 20.04%;
-        background: url(/assets/img/icon_grass.png) no-repeat center center;
-        background-size: contain;
+        width: min(552px, 30vw);
         animation: scaleAnim 1.5s infinite;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     &__beach {
         position: absolute;
         content: "";
         z-index: 1;
-        bottom: -5%;
+        bottom: -6vw;
+        width: min(1699px, 96.9vw);
         left: 1%;
-        width: 96.6%;
-        height: 12%;
-        background: url(/assets/img/icon_beach.png) no-repeat center center;
-        background-size: contain;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
     }
 
     @media screen and (max-width: 768px) {
+        &__form {
+            max-width: 90%;
+            padding-top: 10%;
+            padding-bottom: 20%;
+        }
+
+        &__ttl {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+
+        &__time {
+            >p {
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .wrap {
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            .day,
+            .hour,
+            .min {
+                &::after {
+                    font-size: 40px;
+                }
+            }
+
+            .day,
+            .hour,
+            .min,
+            .sec {
+                font-size: 40px;
+
+                >span {
+                    font-size: 14px;
+                }
+            }
+        }
 
         &__input {
             gap: 20px;
 
             input {
-                height: 60px;
-                padding: 10px 15px;
-                font-size: 20px;
+                height: 45px;
+                padding: 10px;
+                font-size: 14px;
             }
         }
 
         &__submit {
+            max-width: 100%;
+            height: 45px;
             padding: 10px;
 
             span {
-                font-size: 20px;
+                font-size: 14px;
                 padding-right: 15px;
 
                 &::after {
@@ -282,11 +329,20 @@
                 height: 27px;
             }
         }
+
+        &__grass {
+            bottom: 0;
+            right: 0;
+        }
+        &__beach {
+            left: 0;
+            width: 100%;
+        }
+        &__privacy {
+            p {
+                font-size: 12px;
+            }
+        }
     }
 
-    // @media screen and (max-width: 376px) {
-    //     &__form {
-    //         max-width: 90%;
-    //     }
-    // }
 }
