@@ -1017,8 +1017,63 @@ body {
 }
 
 .bg-top {
+  padding-top: 70px;
   background: url("/assets/img/bg.jpg") no-repeat top 0 left 0;
   background-size: cover;
   width: 100%;
   height: 100vh;
+}
+
+.b-adventure {
+  width: 81%;
+  margin: 0 auto;
+}
+.b-adventure__banner {
+  text-align: center;
+}
+.b-adventure__banner img {
+  vertical-align: middle;
+}
+.b-adventure__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -6.5%;
+  padding: 9% 10% 2%;
+  background: url(/assets/img/img_banner.svg) no-repeat center;
+  background-size: contain;
+}
+.b-adventure__info--image {
+  position: relative;
+  width: 26%;
+  padding-bottom: 30%;
+  background-color: #FFDFA0;
+  transform: skewY(-2deg);
+}
+.b-adventure__info--image .img-people {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.b-adventure__info--image .img-people img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+.b-adventure__info--image .icon-pin {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 33px;
+  height: 33px;
+}
+.b-adventure__info--image__insert {
+  width: 23%;
+}
+.b-adventure__info--image__insert img {
+  vertical-align: middle;
 }/*# sourceMappingURL=style.min.css.map */
