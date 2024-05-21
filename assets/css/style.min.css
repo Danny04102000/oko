@@ -912,18 +912,6 @@ html {
   background-size: cover;
   font-size: 10px;
 }
-html::after {
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  width: calc((100% - 600px) / 2);
-  height: 96vh;
-  background: url("../../assets/img/common/img_logo2.svg") no-repeat left calc(50% + 4px) center;
-  content: "";
-}
 @media only screen and (max-width: 1340px) {
   html::after {
     background-size: 85%;
@@ -1251,14 +1239,13 @@ body {
 .b-register__form {
   position: relative;
   z-index: 3;
-  max-width: 70.8%;
   width: 100%;
   background: url(/assets/img/bg_register.png) no-repeat center center;
   background-size: 100% 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6% 5.5% 15%;
+  padding: 10% 5.5% 15%;
 }
 .b-register__form::before {
   position: absolute;
@@ -1450,7 +1437,7 @@ body {
   z-index: 4;
   bottom: -2.5%;
   right: -8%;
-  width: min(552px, 30vw);
+  width: min(400px, 25vw);
   animation: scaleAnim 1.5s infinite;
 }
 .b-register__grass img {
@@ -1543,4 +1530,179 @@ body {
   .b-register__privacy p {
     font-size: 12px;
   }
+}
+
+.b-calendar {
+  position: relative;
+  background: url(/assets/img/bg_calendar.png) no-repeat center center/100% 100%;
+  margin-bottom: 500px;
+  padding: 7% 0 11%;
+}
+.b-calendar__tab {
+  width: 88%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.b-calendar__box {
+  width: 100%;
+}
+.b-calendar__listTab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.b-calendar__listTab li {
+  border-radius: 7px;
+  font-size: 20px;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #360000;
+  color: #FFE5B9;
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0 #490200;
+}
+.b-calendar__listTab li.active {
+  background-color: #F7C768;
+  color: #632312;
+}
+.b-calendar__wrap {
+  display: flex;
+  height: 64px;
+  align-items: center;
+  background: url(/assets/img/bg_calendar-ttl.png) no-repeat center center/100% 100%;
+  margin-bottom: 10px;
+}
+.b-calendar__ttl {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.b-calendar__ttl li {
+  font-size: 16px;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+  color: #FFE5B9;
+}
+.b-calendar__ttl--1 {
+  width: 40%;
+  gap: 2%;
+  padding: 0 3%;
+}
+.b-calendar__ttl--2 {
+  width: 60%;
+}
+.b-calendar__contents {
+  width: 100%;
+  margin-bottom: 10px;
+}
+.b-calendar__contents > li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.b-calendar__contents > li:not(:last-child) {
+  margin-bottom: 20px;
+}
+.b-calendar__item2, .b-calendar__item {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: url(/assets/img/bg_calendar-nor.png) no-repeat center center/100% 100%;
+}
+.b-calendar__item2--first, .b-calendar__item--first {
+  background: url(/assets/img/bg_calendar-1.png) no-repeat center center/100% 100%;
+}
+.b-calendar__item2--second, .b-calendar__item--second {
+  background: url(/assets/img/bg_calendar-2.png) no-repeat center center/100% 100%;
+}
+.b-calendar__item2--third, .b-calendar__item--third {
+  background: url(/assets/img/bg_calendar-3.png) no-repeat center center/100% 100%;
+}
+.b-calendar__item2 > li, .b-calendar__item > li {
+  font-size: 18px;
+  color: #000000;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+}
+.b-calendar__item2 > li .star, .b-calendar__item > li .star {
+  width: 20px;
+  height: 20px;
+}
+.b-calendar__item2 > li .avatar, .b-calendar__item > li .avatar {
+  width: 30px;
+  height: 30px;
+}
+.b-calendar__item2 .topic, .b-calendar__item .topic {
+  font-size: 14px;
+}
+.b-calendar__item {
+  width: 40%;
+  gap: 5%;
+  padding-left: 4%;
+}
+.b-calendar__item2 {
+  width: 60%;
+}
+.b-calendar__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.b-calendar__more button {
+  outline: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.b-calendar__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-calendar__button button {
+  outline: none;
+  background: url(/assets/img/bg_btn-challenge.png) no-repeat center center/100% 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: "SVN-Bango", sans-serif;
+  color: #FFE5B9;
+  padding: 15px;
+}
+.b-calendar__board {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 50%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  background: url(/assets/img/bg_calendar-board.png) no-repeat center center/100% 100%;
+  padding: 1.5% 5%;
+  color: #FFE5B9;
+}
+.b-calendar__board .time {
+  font-size: 14px;
+  font-family: "SpaceGrotesk-Bold", sans-serif;
+  color: #FFE5B9;
+}
+.b-calendar__board .attention {
+  font-size: 10px;
 }/*# sourceMappingURL=style.min.css.map */

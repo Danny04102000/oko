@@ -14,18 +14,18 @@ html {
     background-size: cover;
     font-size: 10px;
 
-    &::after {
-        position: fixed;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        top: 0;
-        left: 0;
-        width: calc((100% - 600px) / 2);
-        height: 96vh;
-        background: image("common/img_logo2.svg") no-repeat left calc(50% + 4px) center;
-        content: '';
-    }
+    // &::after {
+    //     position: fixed;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     top: 0;
+    //     left: 0;
+    //     width: calc((100% - 600px) / 2);
+    //     height: 96vh;
+    //     background: image("common/img_logo2.svg") no-repeat left calc(50% + 4px) center;
+    //     content: '';
+    // }
 
     @include media-down(1340) {
         &::after {
