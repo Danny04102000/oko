@@ -8,14 +8,13 @@
     &__form {
         position: relative;
         z-index: 3;
-        max-width: 70.8%;
         width: 100%;
         background: url(/assets/img/bg_register.png) no-repeat center center;
         background-size: 100% 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 6% 5.5% 15%;
+        padding: 10% 5.5% 15%;
 
         &::before {
             position: absolute;
@@ -226,7 +225,7 @@
         z-index: 4;
         bottom: -2.5%;
         right: -8%;
-        width: min(552px, 30vw);
+        width: min(400px, 25vw);
         animation: scaleAnim 1.5s infinite;
 
         img {
@@ -333,10 +332,12 @@
             bottom: 0;
             right: 0;
         }
+
         &__beach {
             left: 0;
             width: 100%;
         }
+
         &__privacy {
             p {
                 font-size: 12px;
