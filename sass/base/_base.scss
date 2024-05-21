@@ -5,14 +5,14 @@
 /**
  * Set up a decent box model on the root element
  */
-html {
-    position: relative;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    background: image("common/img_wrapper.jpg") no-repeat center bottom;
-    background-attachment: fixed;
-    background-size: cover;
-    font-size: 10px;
+// html {
+//     position: relative;
+//     box-sizing: border-box;
+//     overflow-x: hidden;
+//     background: image("common/img_wrapper.jpg") no-repeat center bottom;
+//     background-attachment: fixed;
+//     background-size: cover;
+//     font-size: 10px;
 
     // &::after {
     //     position: fixed;
@@ -27,20 +27,20 @@ html {
     //     content: '';
     // }
 
-    @include media-down(1340) {
-        &::after {
-            background-size: 85%;
-        }
-    }
+//     @include media-down(1340) {
+//         &::after {
+//             background-size: 85%;
+//         }
+//     }
 
-    @include media-down(sp) {
-        background: #FFF;
+//     @include media-down(sp) {
+//         background: #FFF;
 
-        &::after {
-            display: none;
-        }
-    }
-}
+//         &::after {
+//             display: none;
+//         }
+//     }
+// }
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
