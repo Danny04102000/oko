@@ -1458,6 +1458,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .modal-map {
+    height: 90%;
+    overflow: hidden;
     padding: 60px 25px 35px;
     background-image: url("/assets/img/bg_modal_sp.png");
   }
@@ -1476,6 +1478,10 @@ body {
   .modal-map .map-info__image {
     min-width: auto;
     width: 100%;
+  }
+  .modal-map .scroll {
+    height: 100%;
+    overflow-x: auto;
   }
   .modal-map .title {
     font-size: 23px;

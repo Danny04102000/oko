@@ -1,34 +1,34 @@
 .hidden {
-    display: none;
+  display: none;
 }
 
 .modal {
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 
@@ -39,6 +39,7 @@
   width: 90%;
   background: url('/assets/img/bg_modal_pc.png') no-repeat center;
   background-size: cover;
+
   .close {
     position: absolute;
     width: 36px;
@@ -46,6 +47,7 @@
     right: 40px;
     top: 30px;
   }
+
   .title {
     margin-bottom: 10px;
     color: #3F1104;
@@ -53,6 +55,7 @@
     font-weight: bold;
     line-height: 1.2;
   }
+
   .txt {
     margin-bottom: 20px;
     color: #3F1104;
@@ -60,36 +63,44 @@
     font-weight: bold;
     line-height: 1.2;
   }
+
   .map-info {
     display: flex;
     gap: 15px;
+
     &__content {
       width: calc(100% - 315px);
     }
+
     &__image {
       min-width: 315px;
       width: 315px;
     }
   }
+
   .b-level {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 30px;
+
     .title {
       margin-bottom: 0;
     }
+
     .txt {
       margin-bottom: 0;
       font-style: italic;
     }
   }
+
   .btn_register {
     position: relative;
     display: block;
     width: 36%;
     margin: 25px auto 0;
     transition: opacity 0.3s linear;
+
     .text {
       position: absolute;
       top: 21%;
@@ -102,54 +113,75 @@
       text-decoration: none;
       transform: translateX(-50%);
     }
+
     &:hover {
       opacity: 0.7;
     }
   }
+
   @include media-down(960) {
     padding: 80px 50px 50px;
+
     .map-info {
       &__content {
         width: calc(100% - 250px);
       }
+
       &__image {
         min-width: 250px;
         width: 250px;
       }
     }
   }
+
   @include media-down(sp) {
+    height: 90%;
+    overflow: hidden;
     padding: 60px 25px 35px;
     background-image: url('/assets/img/bg_modal_sp.png');
+
     .close {
       width: 14px;
       height: 14px;
       right: 20px;
       top: 26px;
     }
+
     .map-info {
       flex-wrap: wrap;
+
       &__content {
         width: 100%;
       }
+
       &__image {
         min-width: auto;
         width: 100%;
       }
     }
+
+    .scroll {
+      height: 100%;
+      overflow-x: auto;
+    }
+
     .title {
       font-size: 23px;
     }
+
     .txt {
       margin-bottom: 10px;
       font-size: 13px;
     }
+
     .b-level {
       margin-bottom: 20px;
     }
+
     .btn_register {
       width: 190px;
       margin: 15px auto 0;
+
       .text {
         top: 23%;
         font-size: 16px;
@@ -173,16 +205,19 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
   input {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-    &:checked ~ .checkmark:after {
+
+    &:checked~.checkmark:after {
       display: block;
     }
   }
+
   .checkmark {
     position: absolute;
     top: 50%;
@@ -191,6 +226,7 @@
     width: 33px;
     background: url('/assets/img/bg_checkbox.png') no-repeat center;
     transform: translateY(-50%);
+
     &:after {
       display: none;
       content: "";
@@ -204,19 +240,22 @@
       transform: translateX(-50%) translateY(-60%);
     }
   }
+
   @include media-down(sp) {
     margin-bottom: 5px;
     padding-left: 20px;
     font-size: 13px;
+
     .checkmark {
-        height: 12px;
-        width: 12px;
-        background-size: 12px;
-        &:after {
-          width: 14px;
-          height: 15px;
-          background-size: 14px 15px;
-        }
+      height: 12px;
+      width: 12px;
+      background-size: 12px;
+
+      &:after {
+        width: 14px;
+        height: 15px;
+        background-size: 14px 15px;
       }
+    }
   }
 }

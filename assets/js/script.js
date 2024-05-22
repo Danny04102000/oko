@@ -154,5 +154,5 @@ const initSplide = () => {
 document.addEventListener("DOMContentLoaded", function () {
   initSplide();
   handleModal();
-  countdownFunction();
+  // countdownFunction();
 });
