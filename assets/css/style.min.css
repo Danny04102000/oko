@@ -2090,4 +2090,41 @@ body {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .splide__arrow--next {
+    right: 0;
+  }
+  .splide__arrow--prev {
+    left: 0;
+  }
+  .b-challenge__box {
+    width: 100%;
+  }
+  .b-challenge__box--1 {
+    padding: 10% 5%;
+    flex-direction: column;
+  }
+  .b-challenge__box .ttl {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .b-challenge__box .img {
+    width: 100%;
+  }
+  .b-challenge__box .content {
+    width: 100%;
+    padding: 5%;
+  }
+  .b-challenge__box .content .txt {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .b-challenge__box .page {
+    font-size: 12px;
+  }
+  .b-challenge__button button {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.min.css.map */
