@@ -1473,6 +1473,7 @@ body {
   }
   .modal-map .map-info {
     flex-wrap: wrap;
+    gap: 5px;
   }
   .modal-map .map-info__content {
     width: 100%;

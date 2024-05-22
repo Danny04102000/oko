@@ -81,31 +81,33 @@ if (eleImageMap) {
 }
 
 //countdownDate
-const countdownDate = new Date("June 10, 2024 00:00:00").getTime();
-const countdownFunction = setInterval(function() {
-    // Lấy ngày và giờ hiện tại
-  const now = new Date().getTime();
+function countdownTimer() {
+  const countdownDate = new Date("June 10, 2024 00:00:00").getTime();
+  const countdownFunction = setInterval(function() {
+      // Lấy ngày và giờ hiện tại
+    const now = new Date().getTime();
 
-  // Tính khoảng cách giữa bây giờ và ngày đích
-  const distance = countdownDate - now;
+    // Tính khoảng cách giữa bây giờ và ngày đích
+    const distance = countdownDate - now;
 
-  // Tính toán thời gian cho ngày, giờ, phút và giây
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Tính toán thời gian cho ngày, giờ, phút và giây
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Hiển thị kết quả trong các phần tử có id tương ứng
-  document.getElementById('days').innerText = days + "d";
-  document.getElementById('hours').innerText = hours + "h";
-  document.getElementById('minutes').innerText = minutes + "m";
+    // Hiển thị kết quả trong các phần tử có id tương ứng
+    document.getElementById('days').innerText = days + "d";
+    document.getElementById('hours').innerText = hours + "h";
+    document.getElementById('minutes').innerText = minutes + "m";
 
-  // Nếu countdown kết thúc, hiển thị một thông báo
-  if (distance < 0) {
-      clearInterval(countdownFunction);
-      // document.getElementById('countdown').innerHTML = "Countdown Finished";
-  }
-}, 1000);
+    // Nếu countdown kết thúc, hiển thị một thông báo
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        // document.getElementById('countdown').innerHTML = "Countdown Finished";
+    }
+  }, 1000);
+}
 
 // modal
 
@@ -143,5 +145,5 @@ const handleModal = () => {
 
 document.addEventListener('DOMContentLoaded', function () {
   handleModal();
-  countdownFunction();
+  countdownTimer();
 });
