@@ -80,10 +80,8 @@ if (eleImageMap) {
   });
 }
 
-
-
+//countdownDate
 const countdownDate = new Date("June 10, 2024 00:00:00").getTime();
-
 const countdownFunction = setInterval(function() {
     // Lấy ngày và giờ hiện tại
   const now = new Date().getTime();
@@ -109,6 +107,41 @@ const countdownFunction = setInterval(function() {
   }
 }, 1000);
 
+// modal
+
+const handleModal = () => {
+    const areas = document.querySelectorAll('area');
+    const closeButtons = document.querySelectorAll('.close');
+
+    areas.forEach(area => {
+        area.addEventListener('click', function (event) {
+            event.preventDefault();
+            const modalId = this.getAttribute('href');
+            const modal = document.querySelector(modalId);
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.style.display = 'block';
+            }
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const modal = this.closest('.modal');
+            modal.classList.add('hidden');
+            modal.style.display = 'none';
+        });
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target.classList.contains('modal')) {
+            event.target.classList.add('hidden');
+            event.target.style.display = 'none';
+        }
+    });
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+  handleModal();
   countdownFunction();
 });

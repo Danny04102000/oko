@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="/assets/css/style.min.css" media="all">
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -44,7 +44,7 @@
             <img src="/assets/img/map.png" usemap="#image-map" id="jsImageMapPc">
 
             <map name="image-map">
-              <area target="" alt="4" title="4" href="#1" coords="677,217,826,102" shape="rect">
+              <area target="" alt="4" title="4" href="#modal1" coords="677,217,826,102" shape="rect">
               <area target="" alt="5" title="5" href="#2" coords="812,364,958,473" shape="rect">
               <area target="" alt="6" title="6" href="#3" coords="993,540,1135,645" shape="rect">
               <area target="" alt="7" title="7" href="#4" coords="1297,529,1444,643" shape="rect">
@@ -123,7 +123,7 @@
       </section>
 
 
-      <section class="sec-cmn">
+      <!-- <section class="sec-cmn">
         <div class="inner">
           <div class="b-calendar">
             <div class="b-calendar__board">
@@ -257,7 +257,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <section class="sec-cmn">
         <div class="inner">
           <div class="b-ranking">
@@ -329,6 +329,71 @@
           </div>
         </div>
       </section>
+    </div>
+    <div id="modal1" class="modal">
+      <div class="modal-map">
+        <div class="modal-map__content">
+          <span class="close"><img src="/assets/img/icon_close.png" alt=""></span>
+          <div class="map-info">
+            <div class="map-info__content">
+              <h3 class="title">KỲ NGHỈ HÈ ĐÁNG NHỚ</h3>
+              <p class="txt">Học viên sẽ xác định các kỳ nghỉ hè khác nhau. Giới thiệu về các hoạt động thú vị trong
+                kỳ nghỉ, khám phá các hoạt động
+                văn hoá quốc tế đa dạng.</p>
+              <p class="txt"><u>Dành cho trình độ Beginner:</u><br>
+                Học viên sẽ xác định các từ vựng liên quan đến kỳ nghỉ hè. Thực hành đánh vần và phát âm các từ.</p>
+            </div>
+            <div class="map-info__image"><img src="/assets/img/img_adventure.jpg" alt="KỲ NGHỈ HÈ ĐÁNG NHỚ"></div>
+          </div>
+          <div class="b-level">
+            <h3 class="title">Trình Độ</h3>
+            <p class="txt">Kiểm tra trình độ tại đây</p>
+          </div>
+
+          <form action="#">
+            <ul class="list-level">
+              <li class="list-level__item">
+                <label class="ctm-checkbox">
+                  <input type="checkbox" checked="checked">
+                  <span class="checkmark"></span>
+                  Beginner
+                </label>
+                <ul>
+                  <li>Kiến thức hạn chế về chủ đề học</li>
+                  <li>Gặp nhiều khó khan khi đặt câu</li>
+                </ul>
+              </li>
+              <li class="list-level__item">
+                <label class="ctm-checkbox">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Elementary
+                </label>
+                <ul>
+                  <li>Có thể viết những câu ngắn gọn đơn giản</li>
+                  <li>Có thể mắc lỗi về cấu trúc cơ bản</li>
+                </ul>
+              </li>
+              <li class="list-level__item">
+                <label class="ctm-checkbox">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Intermediate
+                </label>
+                <ul>
+                  <li>Có thể nói đơn giản mà không cần ngưng nghỉ lâu</li>
+                  <li>Có thể sắp xếp câu về những chủ đề không
+                    phổ biến</li>
+                </ul>
+              </li>
+            </ul>
+          </form>
+          <a href="#" class="btn_register">
+            <img src="/assets/img/btn_register.png" alt="">
+            <span class="text">Đăng ký ngay</span>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <script src="/assets/js/jquery-3.6.0.min.js"></script>
