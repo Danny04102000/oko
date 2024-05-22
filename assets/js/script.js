@@ -7,7 +7,6 @@
   });
 })(jQuery);
 
-
 class ImageResize {
   constructor(config) {
     const { width, height, element } = config;
@@ -110,40 +109,50 @@ function countdownTimer() {
 }
 
 // modal
-
 const handleModal = () => {
-    const areas = document.querySelectorAll('area');
-    const closeButtons = document.querySelectorAll('.close');
+  const areas = document.querySelectorAll("area");
+  const closeButtons = document.querySelectorAll(".close");
 
-    areas.forEach(area => {
-        area.addEventListener('click', function (event) {
-            event.preventDefault();
-            const modalId = this.getAttribute('href');
-            const modal = document.querySelector(modalId);
-            if (modal) {
-                modal.classList.remove('hidden');
-                modal.style.display = 'block';
-            }
-        });
+  areas.forEach((area) => {
+    area.addEventListener("click", function (event) {
+      event.preventDefault();
+      const modalId = this.getAttribute("href");
+      const modal = document.querySelector(modalId);
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.style.display = "block";
+      }
     });
+  });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const modal = this.closest('.modal');
-            modal.classList.add('hidden');
-            modal.style.display = 'none';
-        });
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const modal = this.closest(".modal");
+      modal.classList.add("hidden");
+      modal.style.display = "none";
     });
+  });
 
-    window.addEventListener('click', function (event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.classList.add('hidden');
-            event.target.style.display = 'none';
-        }
-    });
-}
+  window.addEventListener("click", function (event) {
+    if (event.target.classList.contains("modal")) {
+      event.target.classList.add("hidden");
+      event.target.style.display = "none";
+    }
+  });
+};
 
-document.addEventListener('DOMContentLoaded', function () {
+// init splide
+const initSplide = () => {
+  var splide = new Splide(".splide", {
+    type: "fade",
+    perPage: 1,
+    perMove: 1,
+    pagination: false,
+  });
+  splide.mount();
+};
+document.addEventListener("DOMContentLoaded", function () {
+  initSplide();
   handleModal();
   countdownTimer();
 });

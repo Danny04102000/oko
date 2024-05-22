@@ -1198,10 +1198,6 @@ body {
   }
 }
 
-.b-challenge {
-  position: relative;
-}
-
 .list-challenge {
   display: flex;
 }
@@ -1462,6 +1458,8 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .modal-map {
+    height: 90%;
+    overflow: hidden;
     padding: 60px 25px 35px;
     background-image: url("/assets/img/bg_modal_sp.png");
   }
@@ -1481,6 +1479,10 @@ body {
   .modal-map .map-info__image {
     min-width: auto;
     width: 100%;
+  }
+  .modal-map .scroll {
+    height: 100%;
+    overflow-x: auto;
   }
   .modal-map .title {
     font-size: 23px;
@@ -2029,4 +2031,63 @@ body {
 }
 .b-calendar__board .attention {
   font-size: 10px;
+}
+
+.splide__slide {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.b-challenge__box {
+  width: 80%;
+  margin-bottom: 25px;
+}
+.b-challenge__box--1 {
+  background: url("/assets/img/challenge/bg_challenge-1.png") no-repeat center center/100% 100%;
+  display: flex;
+  align-items: center;
+}
+.b-challenge__box .ttl {
+  width: 80%;
+  margin-bottom: 20px;
+}
+.b-challenge__box .img {
+  width: 45%;
+}
+.b-challenge__box .content {
+  padding-right: 5%;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.b-challenge__box .content .txt {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.b-challenge__box .page {
+  width: 30%;
+  height: auto;
+  background: url("/assets/img/challenge/bg_challenge-page.png") no-repeat center center/100% 100%;
+  font-size: 16px;
+  font-family: "SVN-Bango", sans-serif;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 3% 4% 5%;
+}
+.b-challenge__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b-challenge__button button {
+  width: 80%;
+  outline: none;
+  border: none;
+  background: none;
+  cursor: pointer;
 }/*# sourceMappingURL=style.min.css.map */
