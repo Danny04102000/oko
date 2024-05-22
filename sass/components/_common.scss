@@ -16,17 +16,18 @@
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
+
   @include media-down(sp) {
     padding: 0 15px;
   }
 }
 
 .font-raleway {
-    font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .font-space-grotesk-b {
-    font-family: 'SpaceGrotesk', sans-serif;
+  font-family: 'SpaceGrotesk', sans-serif;
 }
 
 .bg-top {
@@ -40,6 +41,7 @@
   &-cmn {
     margin-bottom: 50px;
   }
+
   &-challenge {
     margin-bottom: 210px;
   }
@@ -53,6 +55,7 @@
   &__banner {
     width: 58%;
     margin: 0 auto;
+
     img {
       width: 100%;
       vertical-align: middle;
@@ -99,10 +102,12 @@
         height: 13%;
       }
     }
+
     &--box {
       width: 50%;
       padding: 0 2%;
     }
+
     &--name {
       margin-bottom: 4%;
       color: #FFAB0E;
@@ -110,6 +115,7 @@
       font-family: 'SpaceGrotesk', sans-serif;
       font-weight: bold;
     }
+
     &--point {
       display: flex;
       align-items: center;
@@ -117,18 +123,22 @@
       font-size: min(67px, 4.3vw);
       font-family: 'SpaceGrotesk-Bold', sans-serif;
     }
+
     .icon-star {
       margin-right: 10px;
       width: 21%;
     }
   }
+
   &__insert {
     width: 23%;
+
     img {
       width: 100%;
       vertical-align: middle;
     }
   }
+
   @include media-down(sp) {
     width: 100%;
     margin-bottom: 25px;
@@ -154,13 +164,16 @@
           height: 13%;
         }
       }
+
       &--box {
         width: 50%;
         padding: 0 2%;
       }
+
       &--name {
         font-size: min(21px, 3.5vw);
       }
+
       &--point {
         display: flex;
         align-items: center;
@@ -168,13 +181,16 @@
         font-size: min(67px, 4.3vw);
         font-family: 'SpaceGrotesk-Bold', sans-serif;
       }
+
       .icon-star {
         margin-right: 10px;
         width: 21%;
       }
     }
+
     &__insert {
       width: 23%;
+
       img {
         width: 100%;
         vertical-align: middle;
@@ -188,6 +204,7 @@
   margin: 0 auto;
   text-align: center;
   width: 62%;
+
   .txt-time {
     position: absolute;
     top: 37%;
@@ -209,6 +226,7 @@
   font-weight: bold;
   font-family: 'SpaceGrotesk', sans-serif;
   text-align: center;
+
   @include media-down(sp) {
     font-size: 24px;
   }
@@ -221,35 +239,36 @@
     font-weight: bold;
     line-height: 1.7;
   }
+
   &-date {
     color: #FFF993;
     font-size: 40px;
     font-weight: bold;
   }
-  
+
   @include media-down(sp) {
     &-cmn {
       font-size: 14px;
     }
+
     &-date {
       font-size: 20px;
     }
   }
 }
 
-.b-challenge {
-  position: relative;
-}
-
 .list-challenge {
   display: flex;
+
   &__item {
     position: absolute;
+
     &--inner {
       position: relative;
       width: 100%;
       height: 100%;
     }
+
     &--number {
       position: absolute;
       color: #fff;
@@ -259,36 +278,43 @@
       bottom: 11%;
       left: 47%;
     }
+
     &--1 {
       bottom: 16%;
       left: 5.5%;
       width: 18%;
     }
+
     &--2 {
       bottom: 34%;
       left: 22%;
       width: 13%;
     }
+
     &--3 {
       bottom: 15%;
       left: 35%;
       width: 16%;
     }
+
     &--4 {
       bottom: 30%;
       left: 49%;
       width: 14%;
     }
+
     &--5 {
       top: 34%;
       right: 21%;
       width: 13.5%;
     }
+
     &--6 {
       bottom: 22%;
       right: 4.5%;
       width: 16%;
     }
+
     &--1,
     &--3,
     &--4,
@@ -297,6 +323,7 @@
         bottom: 10%;
       }
     }
+
     &--5,
     &--6 {
       .list-challenge__item--number {
@@ -304,11 +331,13 @@
       }
     }
   }
+
   @include media-down(670) {
     &__item {
       &--number {
         bottom: 13%;
       }
+
       &--1,
       &--3,
       &--4 {
@@ -390,14 +419,14 @@
 
 @keyframes scaleAnim {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
 
   50% {
-      transform: scale(1.1);
+    transform: scale(1.1);
   }
 
   100% {
-      transform: scale(1);
+    transform: scale(1);
   }
 }

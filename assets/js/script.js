@@ -7,7 +7,6 @@
   });
 })(jQuery);
 
-
 class ImageResize {
   constructor(config) {
     const { width, height, element } = config;
@@ -82,8 +81,8 @@ if (eleImageMap) {
 
 //countdownDate
 const countdownDate = new Date("June 10, 2024 00:00:00").getTime();
-const countdownFunction = setInterval(function() {
-    // Lấy ngày và giờ hiện tại
+const countdownFunction = setInterval(function () {
+  // Lấy ngày và giờ hiện tại
   const now = new Date().getTime();
 
   // Tính khoảng cách giữa bây giờ và ngày đích
@@ -91,57 +90,69 @@ const countdownFunction = setInterval(function() {
 
   // Tính toán thời gian cho ngày, giờ, phút và giây
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const hours = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Hiển thị kết quả trong các phần tử có id tương ứng
-  document.getElementById('days').innerText = days + "d";
-  document.getElementById('hours').innerText = hours + "h";
-  document.getElementById('minutes').innerText = minutes + "m";
+  document.getElementById("days").innerText = days + "d";
+  document.getElementById("hours").innerText = hours + "h";
+  document.getElementById("minutes").innerText = minutes + "m";
 
   // Nếu countdown kết thúc, hiển thị một thông báo
   if (distance < 0) {
-      clearInterval(countdownFunction);
-      // document.getElementById('countdown').innerHTML = "Countdown Finished";
+    clearInterval(countdownFunction);
+    // document.getElementById('countdown').innerHTML = "Countdown Finished";
   }
 }, 1000);
 
 // modal
-
 const handleModal = () => {
-    const areas = document.querySelectorAll('area');
-    const closeButtons = document.querySelectorAll('.close');
+  const areas = document.querySelectorAll("area");
+  const closeButtons = document.querySelectorAll(".close");
 
-    areas.forEach(area => {
-        area.addEventListener('click', function (event) {
-            event.preventDefault();
-            const modalId = this.getAttribute('href');
-            const modal = document.querySelector(modalId);
-            if (modal) {
-                modal.classList.remove('hidden');
-                modal.style.display = 'block';
-            }
-        });
+  areas.forEach((area) => {
+    area.addEventListener("click", function (event) {
+      event.preventDefault();
+      const modalId = this.getAttribute("href");
+      const modal = document.querySelector(modalId);
+      if (modal) {
+        modal.classList.remove("hidden");
+        modal.style.display = "block";
+      }
     });
+  });
 
-    closeButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const modal = this.closest('.modal');
-            modal.classList.add('hidden');
-            modal.style.display = 'none';
-        });
+  closeButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const modal = this.closest(".modal");
+      modal.classList.add("hidden");
+      modal.style.display = "none";
     });
+  });
 
-    window.addEventListener('click', function (event) {
-        if (event.target.classList.contains('modal')) {
-            event.target.classList.add('hidden');
-            event.target.style.display = 'none';
-        }
-    });
-}
+  window.addEventListener("click", function (event) {
+    if (event.target.classList.contains("modal")) {
+      event.target.classList.add("hidden");
+      event.target.style.display = "none";
+    }
+  });
+};
 
-document.addEventListener('DOMContentLoaded', function () {
+// init splide
+const initSplide = () => {
+  var splide = new Splide(".splide", {
+    type: "fade",
+    perPage: 1,
+    perMove: 1,
+    pagination: false,
+  });
+  splide.mount();
+};
+document.addEventListener("DOMContentLoaded", function () {
+  initSplide();
   handleModal();
-  countdownFunction();
+  // countdownFunction();
 });

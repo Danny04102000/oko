@@ -1,0 +1,71 @@
+.splide {
+    &__slide {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+.b-challenge {
+    &__box {
+        width: 80%;
+        margin-bottom: 25px;
+
+        &--1 {
+            background: url('/assets/img/challenge/bg_challenge-1.png') no-repeat center center / 100% 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .ttl {
+            width: 80%;
+            margin-bottom: 20px;
+        }
+
+        .img {
+            width: 45%;
+        }
+
+
+        .content {
+            padding-right: 5%;
+            width: 65%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .txt {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+
+        .page {
+            width: 30%;
+            height: auto;
+            background: url('/assets/img/challenge/bg_challenge-page.png') no-repeat center center / 100% 100%;
+            font-size: 16px;
+            font-family: $SpaceGrotesk;
+            color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 3% 3% 4% 5%;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button {
+            width: 80%;
+            outline: none;
+            border: none;
+            background: none;
+            cursor: pointer;
+        }
+    }
+}
