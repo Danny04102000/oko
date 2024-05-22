@@ -64,12 +64,16 @@
           <p class="txt-date center">30 ngày: 5 giờ: 90 phút: 20 giây</p>
           <div class="box-time">
             <img src="/assets/img/img_btn_time.png" alt="">
-            <span>30d 5h 9m</span>
+            <div id="countdown" class="txt-time">
+              <span id="days">18d</span>
+              <span id="hours">14h</span>
+              <span id="minutes">26m</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="sec-cmn">
+      <section class="sec-cmn sec-challenge">
         <div class="inner">
           <h2 class="headline-1">CHINH PHỤC THỬ THÁCH - TÍCH LŨY ĐIỂM THƯỞNG</h2>
           <p class="txt-date center">Thử thách mới mở mỗi ngày<br>
@@ -284,12 +288,10 @@
                 </div>
               </div>
               <div class="b-register__input">
-                <div class="b-register__row">
-                  <div class="b-register__col">
-                    <input type="text" id="name" placeholder="Họ và tên*">
-                  </div>
+                <div class="b-register__col">
+                  <input type="text" id="name" placeholder="Họ và tên*">
                 </div>
-                <div class="b-register__row b-register__row--hafl">
+                <div class="b-register__row">
                   <div class="b-register__col">
                     <input type="email" id="email" placeholder="Email">
                   </div>
@@ -297,20 +299,14 @@
                     <input type="tel" id="phone" placeholder="Số điện thoại*">
                   </div>
                 </div>
-                <div class="b-register__row">
-                  <div class="b-register__col">
-                    <input type="text" id="signUpFor" placeholder="Bạn muốn đăng ký cho ai?">
-                  </div>
+                <div class="b-register__col">
+                  <input type="text" id="signUpFor" placeholder="Bạn muốn đăng ký cho ai?">
                 </div>
-                <div class="b-register__row">
-                  <div class="b-register__col">
-                    <input type="text" id="consulting" placeholder="Chọn nhu cầu tư vấn">
-                  </div>
+                <div class="b-register__col">
+                  <input type="text" id="consulting" placeholder="Chọn nhu cầu tư vấn">
                 </div>
-                <div class="b-register__row">
-                  <div class="b-register__col">
-                    <input type="text" id="detail" placeholder="Chi tiết nội dung tư vấn">
-                  </div>
+                <div class="b-register__col">
+                  <input type="text" id="detail" placeholder="Chi tiết nội dung tư vấn">
                 </div>
               </div>
               <button type="submit" class="b-register__submit">

@@ -912,7 +912,7 @@ strong,
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
@@ -984,11 +984,10 @@ body {
   font-style: normal;
 }
 .inner {
-  max-width: 1820px;
+  max-width: 1224px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
-  padding: 0 30px;
 }
 @media only screen and (max-width: 768px) {
   .inner {
@@ -1013,6 +1012,9 @@ body {
 
 .sec-cmn {
   margin-bottom: 50px;
+}
+.sec-challenge {
+  margin-bottom: 210px;
 }
 
 .b-adventure {
@@ -1148,15 +1150,17 @@ body {
   position: relative;
   margin: 0 auto;
   text-align: center;
-  width: 63%;
+  width: 62%;
 }
-.box-time span {
+.box-time .txt-time {
   position: absolute;
-  top: 36%;
+  top: 37%;
   right: 10%;
   color: #fff;
-  font-size: min(100px, 6.3vw);
+  font-size: min(65px, 5.1vw);
   font-family: "SpaceGrotesk-Bold", sans-serif;
+  display: flex;
+  gap: 4%;
 }
 
 .headline-1 {
@@ -1219,37 +1223,40 @@ body {
   left: 47%;
 }
 .list-challenge__item--1 {
-  bottom: 30%;
+  bottom: 16%;
   left: 5.5%;
   width: 18%;
 }
 .list-challenge__item--2 {
-  bottom: 43%;
-  left: 20%;
+  bottom: 34%;
+  left: 22%;
   width: 13%;
 }
 .list-challenge__item--3 {
-  bottom: 27%;
-  left: 31%;
+  bottom: 15%;
+  left: 35%;
   width: 16%;
 }
 .list-challenge__item--4 {
-  bottom: 38%;
-  left: 45%;
+  bottom: 30%;
+  left: 49%;
   width: 14%;
 }
 .list-challenge__item--5 {
-  top: 29%;
-  right: 27%;
+  top: 34%;
+  right: 21%;
   width: 13.5%;
 }
 .list-challenge__item--6 {
-  bottom: 33%;
-  right: 12.5%;
+  bottom: 22%;
+  right: 4.5%;
   width: 16%;
 }
-.list-challenge__item--1 .list-challenge__item--number, .list-challenge__item--3 .list-challenge__item--number, .list-challenge__item--4 .list-challenge__item--number {
+.list-challenge__item--1 .list-challenge__item--number, .list-challenge__item--3 .list-challenge__item--number, .list-challenge__item--4 .list-challenge__item--number, .list-challenge__item--6 .list-challenge__item--number {
   bottom: 10%;
+}
+.list-challenge__item--5 .list-challenge__item--number, .list-challenge__item--6 .list-challenge__item--number {
+  left: 43%;
 }
 @media only screen and (max-width: 670px) {
   .list-challenge__item--number {
@@ -1284,9 +1291,6 @@ body {
   width: 100%;
   background: url(/assets/img/bg_register.png) no-repeat center center;
   background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 10% 5.5% 15%;
 }
 .b-register__form::before {
@@ -1298,7 +1302,6 @@ body {
   background-size: contain;
   top: -6.8%;
   left: 0;
-  animation: scaleAnim 1.5s infinite;
 }
 .b-register__ttl {
   font-size: min(75px, 4vw);
@@ -1320,7 +1323,7 @@ body {
 .b-register__time .wrap {
   display: flex;
   justify-content: center;
-  gap: min(60px, 3.5vw);
+  gap: 6%;
   margin-bottom: min(80px, 4.5vw);
 }
 .b-register__time .day,
@@ -1329,6 +1332,7 @@ body {
 .b-register__time .sec {
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-size: min(130px, 6vw);
   color: #7A3114;
   font-family: "SpaceGrotesk-Bold", sans-serif;
@@ -1359,22 +1363,8 @@ body {
   top: 0;
   font-family: "SpaceGrotesk-Bold", sans-serif;
 }
-.b-register__time .day {
-  align-items: flex-start;
-}
-.b-register__time .hour,
-.b-register__time .min {
-  align-items: center;
-}
-.b-register__time .sec {
-  align-items: flex-end;
-}
 .b-register__input {
-  max-width: 1022px;
-  display: flex;
   width: 100%;
-  flex-direction: column;
-  gap: 32px;
   margin-bottom: min(115px, 6.5vw);
 }
 .b-register__input input {
@@ -1398,9 +1388,11 @@ body {
 }
 .b-register__row {
   display: flex;
-  gap: min(70px, 4vw);
+  gap: 5%;
+  width: 100%;
 }
 .b-register__col {
+  margin-bottom: 3%;
   width: 100%;
 }
 .b-register__submit {
@@ -1417,7 +1409,7 @@ body {
   align-items: center;
   padding: 20px;
   font-weight: bold;
-  margin-bottom: 34px;
+  margin: 0 auto 34px;
 }
 .b-register__submit span {
   font-size: min(38px, 2.5vw);
@@ -1439,6 +1431,7 @@ body {
 .b-register__privacy {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 .b-register__privacy p {
@@ -1518,13 +1511,13 @@ body {
   .b-register__time .day::after,
   .b-register__time .hour::after,
   .b-register__time .min::after {
-    font-size: 40px;
+    font-size: 30px;
   }
   .b-register__time .day,
   .b-register__time .hour,
   .b-register__time .min,
   .b-register__time .sec {
-    font-size: 40px;
+    font-size: 30px;
   }
   .b-register__time .day > span,
   .b-register__time .hour > span,
@@ -1572,12 +1565,14 @@ body {
   .b-register__privacy p {
     font-size: 12px;
   }
+  .b-register .b-register__row {
+    flex-wrap: wrap;
+  }
 }
 
 .b-calendar {
   position: relative;
   background: url(/assets/img/bg_calendar.png) no-repeat center center/100% 100%;
-  margin-bottom: 500px;
   padding: 7% 0 11%;
 }
 .b-calendar__tab {
