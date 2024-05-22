@@ -11,9 +11,6 @@
         width: 100%;
         background: url(/assets/img/bg_register.png) no-repeat center center;
         background-size: 100% 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         padding: 10% 5.5% 15%;
 
         &::before {
@@ -25,7 +22,6 @@
             background-size: contain;
             top: -6.8%;
             left: 0;
-            animation: scaleAnim 1.5s infinite;
         }
     }
 
@@ -51,7 +47,7 @@
         .wrap {
             display: flex;
             justify-content: center;
-            gap: min(60px, 3.5vw);
+            gap: 6%;
             margin-bottom: min(80px, 4.5vw);
         }
 
@@ -61,6 +57,7 @@
         .sec {
             display: flex;
             flex-direction: column;
+            align-items: center;
             font-size: min(130px, 6vw);
             color: #7A3114;
             font-family: $SpaceGroteskBold;
@@ -90,26 +87,10 @@
             }
         }
 
-        .day {
-            align-items: flex-start;
-        }
-
-        .hour,
-        .min {
-            align-items: center;
-        }
-
-        .sec {
-            align-items: flex-end;
-        }
     }
 
     &__input {
-        max-width: 1022px;
-        display: flex;
         width: 100%;
-        flex-direction: column;
-        gap: 32px;
         margin-bottom: min(115px, 6.5vw);
 
         input {
@@ -133,10 +114,12 @@
 
     &__row {
         display: flex;
-        gap: min(70px, 4vw);
+        gap: 5%;
+        width: 100%;
     }
-
+    
     &__col {
+        margin-bottom: 3%;
         width: 100%;
     }
 
@@ -154,7 +137,7 @@
         align-items: center;
         padding: 20px;
         font-weight: bold;
-        margin-bottom: 34px;
+        margin: 0 auto 34px;
 
         span {
             font-size: min(38px, 2.5vw);
@@ -179,6 +162,7 @@
     &__privacy {
         display: flex;
         align-items: center;
+        justify-content: center;
         margin-bottom: 20px;
 
         p {
@@ -274,7 +258,7 @@
             .hour,
             .min {
                 &::after {
-                    font-size: 40px;
+                    font-size: 30px;
                 }
             }
 
@@ -282,7 +266,7 @@
             .hour,
             .min,
             .sec {
-                font-size: 40px;
+                font-size: 30px;
 
                 >span {
                     font-size: 14px;
@@ -342,6 +326,10 @@
             p {
                 font-size: 12px;
             }
+        }
+
+        .b-register__row {
+            flex-wrap: wrap;
         }
     }
 
