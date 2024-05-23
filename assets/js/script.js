@@ -73,8 +73,8 @@ class ImageResize {
 var eleImageMap = document.getElementById("jsImageMapPc");
 if (eleImageMap) {
   const resizeImgPC = new ImageResize({
-    width: 1783,
-    height: 821,
+    width: 1820,
+    height: 1011,
     element: "#jsImageMapPc",
   });
 }
@@ -120,7 +120,6 @@ const handleModal = () => {
       const modal = document.querySelector(modalId);
       if (modal) {
         modal.classList.remove("hidden");
-        modal.style.display = "block";
       }
     });
   });
@@ -129,7 +128,6 @@ const handleModal = () => {
     button.addEventListener("click", function () {
       const modal = this.closest(".modal");
       modal.classList.add("hidden");
-      modal.style.display = "none";
     });
   });
 
