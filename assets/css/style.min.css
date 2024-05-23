@@ -1324,6 +1324,19 @@ body {
   }
 }
 
+.b-map {
+  overflow-x: auto;
+}
+.b-map::-webkit-scrollbar {
+  display: none;
+}
+.b-map::-webkit-scrollbar-thumb {
+  display: none;
+}
+.b-map img {
+  min-width: 800px;
+}
+
 @keyframes scaleAnim {
   0% {
     transform: scale(1);
@@ -1335,10 +1348,6 @@ body {
     transform: scale(1);
   }
 }
-.hidden {
-  display: none;
-}
-
 .modal {
   position: fixed;
   z-index: 10;
@@ -1351,6 +1360,10 @@ body {
   justify-content: center;
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.hidden {
+  display: none;
 }
 
 .modal-content {
