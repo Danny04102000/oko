@@ -1022,7 +1022,7 @@ body {
 .b-adventure__info--name {
   margin-bottom: 4%;
   color: #FFAB0E;
-  font-size: min(42px, 3.2vw);
+  font-size: min(40px, 3.2vw);
   font-family: "SpaceGrotesk", sans-serif;
   font-weight: bold;
 }
