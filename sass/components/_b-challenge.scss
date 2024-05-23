@@ -69,3 +69,58 @@
         }
     }
 }
+
+@include media-down(sp) {
+    .splide {
+        &__arrow {
+            &--next {
+                right: 0;
+            }
+
+            &--prev {
+                left: 0;
+            }
+        }
+    }
+
+    .b-challenge {
+        &__box {
+            width: 100%;
+
+            &--1 {
+                padding: 10% 5%;
+                flex-direction: column;
+            }
+
+            .ttl {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .img {
+                width: 100%;
+            }
+
+
+            .content {
+                width: 100%;
+                padding: 5%;
+
+                .txt {
+                    font-size: 14px;
+                    margin-bottom: 15px;
+                }
+            }
+
+            .page {
+                font-size: 12px;
+            }
+        }
+
+        &__button {
+            button {
+                width: 50%;
+            }
+        }
+    }
+}
