@@ -1,59 +1,4 @@
 @charset "UTF-8";
-@import url("/assets/fonts/SpaceGrotesk-Bold.ttf");
-@import url("/assets/fonts/SpaceGrotesk-Medium.ttf");
-@import url("/assets/fonts/SpaceGrotesk-Regular.ttf");
-@import url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
-.theme1 {
-  --background-theme: #D9F1EE;
-  --color-theme: #00A08E;
-  --color-title-theme: #00A08E;
-  --background-icon: #00A08E;
-  --background-btn: #00A08E;
-  --color-btn-1: #D9F1EE;
-  --color-btn-2: #00A08E;
-  --background-link: #E7F1F8;
-  --bg-about: #D9F1EE;
-  --icon-about: #00A08E;
-}
-
-.theme2 {
-  --background-theme: #E7F1F8;
-  --color-theme: #01A3C1;
-  --color-title-theme: #01A3C1;
-  --background-icon: #01A3C1;
-  --background-link: #E7F1F8;
-  --title-keyv: #fff;
-  --bg-about: #E7F1F8;
-  --icon-about: #01A3C1;
-}
-
-.theme3 {
-  --background-theme: #FFFBEA;
-  --color-theme: #EA884F;
-  --color-title-theme: #EA884F;
-  --background-icon: #EA884F;
-  --background-btn: #FAA327;
-  --color-btn-1: #FFEED8;
-  --color-btn-2: #EA8850;
-  --background-link: #E7F1F8;
-  --bg-about: #E7F1F8;
-  --icon-about: #EA884F;
-}
-
-.theme4 {
-  --background-theme: #FFFBEA;
-  --color-theme: #9B7700;
-  --color-title-theme: #EA8850;
-  --background-icon: #FFCE2F;
-  --background-btn: #9B7700;
-  --color-btn-1: #FFF5D5;
-  --color-btn-2: #FFCE2F;
-  --background-link: #FFF5D5;
-  --title-keyv: #523F03;
-  --bg-about: #FFF5D5;
-  --icon-about: #9B7700;
-}
-
 /* stylelint-disable */
 /* ******************************************************************
 
@@ -79,6 +24,10 @@
 /* ------------------------------------------------------------------
     1-1. Reset styles
 -------------------------------------------------------------------*/
+@import url("/assets/fonts/SpaceGrotesk-Bold.ttf");
+@import url("/assets/fonts/SpaceGrotesk-Medium.ttf");
+@import url("/assets/fonts/SpaceGrotesk-Regular.ttf");
+@import url("/assets/fonts/SpaceGrotesk-VariableFont_wght.ttf");
 body,
 div,
 dl,
