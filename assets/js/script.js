@@ -151,22 +151,26 @@ const initSplide = () => {
   });
   splide.mount();
 };
-
-// padding table
-const paddingTable = () => {
-  const tables = document.querySelectorAll(".jsMargin");
-  if (tables) {
-    tables.forEach((table) => {
-      const trs = table.querySelectorAll("tr");
-      trs.forEach((tr, index) => {
-        tr.style.setProperty("--padding-value", `${(index + 1) * 10}px`);
+// Tab
+const handleTab = () => {
+  const tabsEle = $(".jsTabs li");
+  const tabContentEle = $(".jsTabContents > div");
+  if (tabsEle.length && tabContentEle.length) {
+    tabsEle.each(function (index, tabEle) {
+      $(tabEle).on("click", function () {
+        tabsEle.removeClass("active");
+        $(this).addClass("active");
+        tabContentEle.hide();
+        $(tabContentEle[index]).fadeIn();
       });
     });
+    tabsEle.first().addClass("active");
+    tabContentEle.hide().first().show();
   }
 };
 document.addEventListener("DOMContentLoaded", function () {
   initSplide();
   handleModal();
   countdownTimer();
-  paddingTable();
+  handleTab();
 });

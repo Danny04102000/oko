@@ -50,6 +50,7 @@
                 background: linear-gradient(90deg, #360000 0%, #460100 20%, #560300 40%, #600400 60%, #640500 100%);
                 border-radius: 8px;
                 box-shadow: 2px 2px 0 0 #490200;
+                transition: background 0.3s, color 0.3s;
             }
 
             li.active {
@@ -60,6 +61,8 @@
 
         .table {
             width: 100%;
+            height: 350px;
+            overflow-y: auto;
             border-collapse: collapse;
             font-family: $SpaceGrotesk;
             text-align: center;
@@ -71,7 +74,6 @@
             thead {
                 tr {
                     height: 60px;
-                    padding-bottom: 10px;
                     background: #640500;
 
                     th {
@@ -81,11 +83,11 @@
                     }
 
                     th:first-child {
-                        border-radius: 10px 0 0 10px;
+                        border-radius: 10px 0 0 0;
                     }
 
                     th:last-child {
-                        border-radius: 0 10px 10px 0;
+                        border-radius: 0 10px 0 0;
                     }
                 }
             }
@@ -94,14 +96,6 @@
                 td {
                     padding: 1%;
                     font-size: 14px;
-                }
-
-                td:first-child {
-                    border-radius: 10px 0 0 10px;
-                }
-
-                td:last-child {
-                    border-radius: 0 10px 10px 0;
                 }
 
                 .button {
@@ -147,8 +141,18 @@
                 }
 
                 tr {
+                    border-left: 2px solid #333;
+                    border-right: 2px solid #333;
+                    border-bottom: 2px solid #333;
+                }
+
+                tr:nth-child(1) {
+                    border-top: 2px solid #333;
+                }
+
+                tr {
+                    display: none;
                     background-color: #FFFFFF;
-                    transform: translateY(var(--padding-value));
                 }
 
                 tr.first {
@@ -162,21 +166,103 @@
                 tr.third {
                     background-color: #CC7B1E;
                 }
+
+                tr:nth-child(1),
+                tr:nth-child(2),
+                tr:nth-child(3),
+                tr:nth-child(4) {
+                    display: table-row;
+                }
             }
         }
     }
 
     &__footer {
         z-index: 1;
+        transform: translateY(-20%);
         position: relative;
     }
 
     &__more {
         position: absolute;
-        top: 60px;
+        top: 25%;
         left: 50%;
+        transform: translateX(-50%);
         outline: none;
         background: none;
         border: none;
+    }
+
+    @include media-down(sp) {
+        &__header {
+            padding: 30% 8% 0;
+
+            .time {
+                font-size: 12px;
+                margin-bottom: 5px;
+            }
+        }
+
+        &__content {
+            width: 100%;
+
+            .tabs {
+                li {
+                    width: 100%;
+                    font-size: 12px;
+                }
+            }
+
+            .table {
+                white-space: nowrap;
+            }
+
+            .scroll {
+                width: 100%;
+                overflow-x: auto;
+            }
+        }
+    }
+
+    @include media-down(376) {
+        &__content {
+            .table {
+                width: 200%;
+                white-space: nowrap;
+
+                tbody {
+                    td {
+                        font-size: 12px;
+                    }
+
+                    .button {
+
+                        button {
+                            padding: 5% 2%;
+
+                            span {
+                                font-size: 10px;
+                            }
+                        }
+                    }
+
+                    .topic {
+                        font-size: 10px;
+                    }
+
+                    .avatar {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    .point {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+
+
+        }
     }
 }
