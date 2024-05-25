@@ -1486,7 +1486,7 @@ body {
 }
 .b-ranking .b-calendar__more {
   top: auto;
-  bottom: 15%;
+  bottom: 12%;
 }
 @media only screen and (max-width: 768px) {
   .b-ranking {
@@ -1567,6 +1567,29 @@ body {
   .b-tab .tab-nav__btn {
     border-radius: 10px;
   }
+}
+
+.scroll {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+}
+.scroll--show {
+  overflow-y: auto;
+}
+.scroll--show table tbody tr {
+  display: table-row !important;
+}
+.scroll th:nth-child(1),
+.scroll td:nth-child(1) {
+  position: sticky;
+  left: 0;
+}
+.scroll th:nth-child(1) {
+  z-index: 3;
 }
 @keyframes fade {
   from {
@@ -1886,6 +1909,14 @@ body {
   position: absolute;
   right: 6%;
   top: 10%;
+}
+@media only screen and (max-width: 768px) {
+  .modal-calendar__content {
+    padding: 5%;
+  }
+  .modal-calendar__close {
+    top: 5%;
+  }
 }
 
 .b-register {
@@ -2322,28 +2353,6 @@ body {
 .b-calendar__content .table tbody tr:nth-child(3),
 .b-calendar__content .table tbody tr:nth-child(4) {
   display: table-row;
-}
-.b-calendar__content .scroll {
-  width: 100%;
-  overflow-y: hidden;
-  overflow-x: auto;
-  border-left: 2px solid #333;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
-}
-.b-calendar__content .scroll--show {
-  overflow-y: auto;
-}
-.b-calendar__content .scroll--show .table tbody tr {
-  display: table-row;
-}
-.b-calendar__content .scroll th:nth-child(1),
-.b-calendar__content .scroll td:nth-child(1) {
-  position: sticky;
-  left: 0;
-}
-.b-calendar__content .scroll th:nth-child(1) {
-  z-index: 3;
 }
 .b-calendar__wrap {
   position: relative;
