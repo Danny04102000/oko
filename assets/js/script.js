@@ -113,17 +113,26 @@ function countdownTimer() {
 // modal
 const handleModal = () => {
   const areas = document.querySelectorAll("area");
+  const modals = document.querySelectorAll(".jsOpenModal");
   const closeButtons = document.querySelectorAll(".close");
 
+  const openModal = (event) => {
+    event.preventDefault();
+    const modalId = event.currentTarget.getAttribute("data-modal-id");
+    const modal = document.querySelector(modalId);
+    if (modal) {
+      modal.classList.remove("hidden");
+    }
+  };
+
   areas.forEach((area) => {
-    area.addEventListener("click", function (event) {
-      event.preventDefault();
-      const modalId = this.getAttribute("href");
-      const modal = document.querySelector(modalId);
-      if (modal) {
-        modal.classList.remove("hidden");
-      }
-    });
+    area.setAttribute('data-modal-id', area.getAttribute('href'));
+    area.addEventListener("click", openModal);
+  });
+
+  modals.forEach((modal) => {
+    modal.setAttribute('data-modal-id', modal.getAttribute('href'));
+    modal.addEventListener("click", openModal);
   });
 
   closeButtons.forEach((button) => {

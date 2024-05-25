@@ -33,6 +33,7 @@
 
 .bg-top {
   padding-top: 70px;
+  padding-bottom: 50px;
   background: url('/assets/img/bg.jpg') repeat-y top 0 left 0;
   background-size: cover;
   width: 100%;
@@ -621,11 +622,18 @@
   &--title {
     margin: 0 auto;
   }
+  .b-calendar__more {
+    top: auto;
+    bottom: 15%;
+  }
   @include media-down(sp) {
       padding: 0 0% 15%;
       &::before {
         content: "";
         display: none;
+      }
+      .b-calendar__more {
+        bottom: 8%;
       }
     }
 }
