@@ -933,7 +933,7 @@ body {
   font-style: normal;
 }
 .inner {
-  max-width: 1224px;
+  max-width: 1920px;
   width: 100%;
   padding: 0 30px;
   margin: 0 auto;
@@ -964,6 +964,9 @@ body {
 }
 .sec-challenge {
   margin-bottom: 210px;
+}
+.sec-ranking {
+  margin-bottom: 100px;
 }
 
 .b-adventure {
@@ -1287,6 +1290,86 @@ body {
   min-width: 800px;
 }
 
+.b-ranking--title {
+  width: 44%;
+  margin: 0 auto;
+}
+
+.b-tab {
+  max-width: 740px;
+  margin: 0 auto 15px;
+}
+.b-tab .tab-box {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.b-tab .list__tab-box {
+  position: relative;
+  padding-bottom: 21%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.b-tab .list__tab-box__item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  display: none;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.b-tab .list__tab-box__item img {
+  vertical-align: middle;
+}
+.b-tab .tab-nav {
+  display: flex;
+  gap: 10px;
+}
+.b-tab .tab-nav__btn {
+  width: calc((100% - 20px) / 3);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: opacity 0.3s linear;
+}
+.b-tab .tab-nav__btn:hover {
+  opacity: 0.7;
+}
+.b-tab .tab-nav__btn img {
+  vertical-align: middle;
+}
+@media only screen and (max-width: 768px) {
+  .b-tab {
+    margin-bottom: 20px;
+  }
+  .b-tab .tab-box {
+    overflow: hidden;
+    margin-bottom: 10px;
+  }
+  .b-tab .list__tab-box {
+    padding-bottom: 21%;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  .b-tab .tab-nav {
+    gap: 10px;
+  }
+  .b-tab .tab-nav__btn {
+    border-radius: 10px;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @keyframes scaleAnim {
   0% {
     transform: scale(1);
