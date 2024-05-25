@@ -180,33 +180,7 @@
             }
         }
 
-        .scroll {
-            width: 100%;
-            overflow-y: hidden;
-            overflow-x: auto;
-            border-left: 2px solid #333;
-            border-right: 2px solid #333;
-            border-bottom: 2px solid #333;
 
-            &--show {
-                overflow-y: auto;
-
-                .table tbody tr {
-                    display: table-row;
-                }
-            }
-
-            th:nth-child(1),
-            td:nth-child(1) {
-                position: sticky;
-                left: 0;
-            }
-
-            th:nth-child(1) {
-                z-index: 3;
-
-            }
-        }
     }
 
     &__wrap {
@@ -255,13 +229,16 @@
 
             .table {
                 white-space: nowrap;
+
                 tbody {
                     td {
                         font-size: 12px;
                     }
+
                     .button {
                         button {
                             padding: 5% 2%;
+
                             span {
                                 font-size: 10px;
                             }

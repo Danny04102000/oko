@@ -40,16 +40,20 @@
   height: 90%;
   background: url('/assets/img/bg_modal_pc.png') no-repeat center;
   background-size: cover;
+
   .scroll {
     height: 100%;
     overflow-x: auto;
+
     &::-webkit-scrollbar {
       display: none;
     }
+
     &::-webkit-scrollbar-thumb {
       display: none;
     }
   }
+
   .close {
     position: absolute;
     width: 36px;
@@ -333,5 +337,15 @@
     position: absolute;
     right: 6%;
     top: 10%;
+  }
+
+  @include media-down(sp) {
+    &__content {
+      padding: 5%;
+    }
+
+    &__close {
+      top: 5%;
+    }
   }
 }
