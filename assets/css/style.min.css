@@ -1455,6 +1455,10 @@ body {
 .b-ranking--title {
   margin: 0 auto;
 }
+.b-ranking .b-calendar__more {
+  top: auto;
+  bottom: 15%;
+}
 @media only screen and (max-width: 768px) {
   .b-ranking {
     padding: 0 0% 15%;
@@ -1462,6 +1466,9 @@ body {
   .b-ranking::before {
     content: "";
     display: none;
+  }
+  .b-ranking .b-calendar__more {
+    bottom: 8%;
   }
 }
 
@@ -2245,6 +2252,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: #333;
 }
 .b-calendar__content .table tbody .topic {
   font-size: 12px;
