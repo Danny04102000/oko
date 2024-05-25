@@ -147,35 +147,55 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function handelTabJs() {
-  const tabs = document.querySelectorAll('.jsTab');
+  const tabs = document.querySelectorAll(".jsTab");
 
   tabs.forEach((tab) => {
     tab.addEventListener("click", function () {
-      let id = this.getAttribute("data-id")
+      let id = this.getAttribute("data-id");
       currentSlide(+id);
     });
   });
 }
 
 function currentSlide(n) {
-  showSlides(slideIndex = n);
+  showSlides((slideIndex = n));
 }
 
+// jsMore
+
+function handleMoreTable() {
+  const moreBtn = $(".jsMore");
+  const scrollEles = $(".b-calendar__content .scroll");
+  if (moreBtn.length && scrollEles.length) {
+    moreBtn.on("click", function () {
+      console.log("click");
+      scrollEles.each(function (index, ele) {
+        if ($(ele).is(":visible")) {
+          $(ele).toggleClass("scroll--show");
+        }
+      });
+    });
+  }
+}
 
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("jsTabBox");
   var tabs = document.getElementsByClassName("jsTab");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (i = 0; i < tabs.length; i++) {
-      tabs[i].className = tabs[i].className.replace(" active", "");
+    tabs[i].className = tabs[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  tabs[slideIndex-1].className += " active";
+  slides[slideIndex - 1].style.display = "block";
+  tabs[slideIndex - 1].className += " active";
 }
 
 // init splide
@@ -211,4 +231,5 @@ document.addEventListener("DOMContentLoaded", function () {
   handelTabJs();
   countdownTimer();
   handleTab();
+  handleMoreTable();
 });
