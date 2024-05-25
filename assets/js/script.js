@@ -139,6 +139,43 @@ const handleModal = () => {
   });
 };
 
+// tab slide
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function handelTabJs() {
+  const tabs = document.querySelectorAll('.jsTab');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      let id = this.getAttribute("data-id")
+      currentSlide(+id);
+    });
+  });
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("jsTabBox");
+  var tabs = document.getElementsByClassName("jsTab");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < tabs.length; i++) {
+      tabs[i].className = tabs[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  tabs[slideIndex-1].className += " active";
+}
+
 // init splide
 const initSplide = () => {
   var splide = new Splide(".splide", {
@@ -152,5 +189,6 @@ const initSplide = () => {
 document.addEventListener("DOMContentLoaded", function () {
   initSplide();
   handleModal();
+  handelTabJs();
   countdownTimer();
 });
