@@ -2252,9 +2252,6 @@ body {
 }
 .b-calendar__content .table tbody tr {
   height: 60px;
-  border-left: 2px solid #333;
-  border-right: 2px solid #333;
-  border-bottom: 2px solid #333;
 }
 .b-calendar__content .table tbody tr:nth-child(1) {
   border-top: 2px solid #333;
@@ -2282,9 +2279,11 @@ body {
 }
 .b-calendar__content .scroll {
   width: 100%;
-  height: 329px;
   overflow-y: hidden;
   overflow-x: auto;
+  border-left: 2px solid #333;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
 }
 .b-calendar__content .scroll--show {
   overflow-y: auto;
@@ -2317,7 +2316,7 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .b-calendar__header {
-    padding: 30% 8% 0;
+    padding: 19% 6% 0;
   }
   .b-calendar__header .time {
     font-size: 12px;
