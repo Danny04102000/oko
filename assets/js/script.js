@@ -165,12 +165,11 @@ function currentSlide(n) {
 
 function handleMoreTable() {
   const moreBtn = $(".jsMore");
-  const scrollEles = $(".b-calendar__content .scroll");
-  if (moreBtn.length && scrollEles.length) {
-    moreBtn.on("click", function () {
-      console.log("click");
-      scrollEles.each(function (index, ele) {
-        if ($(ele).is(":visible")) {
+  if (moreBtn.length) {
+    $(document).on("click", ".jsMore", function () {
+      const showMoreEles = $(this).siblings();
+      showMoreEles.each(function (index, ele) {
+        if ($(ele).hasClass("jsShowMore") && $(ele).is(":visible")) {
           $(ele).toggleClass("scroll--show");
         }
       });
