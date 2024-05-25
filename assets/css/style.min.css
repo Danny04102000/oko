@@ -1427,6 +1427,35 @@ body {
   }
 }
 
+@media only screen and (min-width: 768.1px) {
+  .bg-decor {
+    position: relative;
+  }
+  .bg-decor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 23%;
+    height: 50%;
+    background: url(/assets/img/bg_rank_decor_01.png) no-repeat center;
+    background-size: contain;
+    z-index: 20;
+    animation: scaleAnim 1.5s infinite;
+  }
+  .bg-decor::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 23%;
+    height: 23%;
+    background: url(/assets/img/bg_rank_decor_02.png) no-repeat center;
+    background-size: contain;
+    z-index: 20;
+    animation: scaleAnim 1.5s infinite;
+  }
+}
 .b-ranking {
   position: relative;
   padding: 0 20% 15%;
