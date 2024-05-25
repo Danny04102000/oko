@@ -1,0 +1,19 @@
+.b-rotation {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10%;
+
+    &__content {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__footer {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}

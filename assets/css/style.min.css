@@ -2480,4 +2480,21 @@ body {
   .b-challenge__button button {
     width: 50%;
   }
+}
+.b-rotation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10%;
+}
+.b-rotation__content {
+  position: relative;
+  z-index: 1;
+}
+.b-rotation__footer {
+  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }/*# sourceMappingURL=style.min.css.map */
