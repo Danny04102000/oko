@@ -82,8 +82,8 @@ if (eleImageMap) {
 //countdownDate
 function countdownTimer() {
   const countdownDate = new Date("June 10, 2024 00:00:00").getTime();
-  const countdownFunction = setInterval(function() {
-      // Lấy ngày và giờ hiện tại
+  const countdownFunction = setInterval(function () {
+    // Lấy ngày và giờ hiện tại
     const now = new Date().getTime();
 
     // Tính khoảng cách giữa bây giờ và ngày đích
@@ -91,19 +91,21 @@ function countdownTimer() {
 
     // Tính toán thời gian cho ngày, giờ, phút và giây
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const hours = Math.floor(
+      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     // const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Hiển thị kết quả trong các phần tử có id tương ứng
-    document.getElementById('days').innerText = days + "d";
-    document.getElementById('hours').innerText = hours + "h";
-    document.getElementById('minutes').innerText = minutes + "m";
+    document.getElementById("days").innerText = days + "d";
+    document.getElementById("hours").innerText = hours + "h";
+    document.getElementById("minutes").innerText = minutes + "m";
 
     // Nếu countdown kết thúc, hiển thị một thông báo
     if (distance < 0) {
-        clearInterval(countdownFunction);
-        // document.getElementById('countdown').innerHTML = "Countdown Finished";
+      clearInterval(countdownFunction);
+      // document.getElementById('countdown').innerHTML = "Countdown Finished";
     }
   }, 1000);
 }
@@ -139,6 +141,43 @@ const handleModal = () => {
   });
 };
 
+// tab slide
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function handelTabJs() {
+  const tabs = document.querySelectorAll('.jsTab');
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", function () {
+      let id = this.getAttribute("data-id")
+      currentSlide(+id);
+    });
+  });
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("jsTabBox");
+  var tabs = document.getElementsByClassName("jsTab");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < tabs.length; i++) {
+      tabs[i].className = tabs[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  tabs[slideIndex-1].className += " active";
+}
+
 // init splide
 const initSplide = () => {
   var splide = new Splide(".splide", {
@@ -149,8 +188,27 @@ const initSplide = () => {
   });
   splide.mount();
 };
+// Tab
+const handleTab = () => {
+  const tabsEle = $(".jsTabs li");
+  const tabContentEle = $(".jsTabContents > div");
+  if (tabsEle.length && tabContentEle.length) {
+    tabsEle.each(function (index, tabEle) {
+      $(tabEle).on("click", function () {
+        tabsEle.removeClass("active");
+        $(this).addClass("active");
+        tabContentEle.hide();
+        $(tabContentEle[index]).fadeIn();
+      });
+    });
+    tabsEle.first().addClass("active");
+    tabContentEle.hide().first().show();
+  }
+};
 document.addEventListener("DOMContentLoaded", function () {
   initSplide();
   handleModal();
+  handelTabJs();
   countdownTimer();
+  handleTab();
 });

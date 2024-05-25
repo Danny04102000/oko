@@ -150,6 +150,7 @@
     .map-info {
       flex-wrap: wrap;
       gap: 5px;
+
       &__content {
         width: 100%;
       }
@@ -257,5 +258,75 @@
         background-size: 14px 15px;
       }
     }
+  }
+}
+
+.modal-calendar {
+  position: relative;
+  max-width: 780px;
+  width: 100%;
+  padding: 5%;
+  background: url('/assets/img/bg_modal-calendar.png') no-repeat center / 100% 100%;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .img {
+      margin-bottom: 20px;
+    }
+
+    .ttl {
+      text-align: center;
+      line-height: 1.6;
+      font-family: $SpaceGrotesk;
+      color: #3F1104;
+      font-size: 22px;
+      margin-bottom: 40px;
+
+      &__large {
+        font-family: $SVN;
+        font-size: 32px;
+      }
+    }
+
+    .point {
+      max-width: 200px;
+      width: 100%;
+      text-align: center;
+      font-size: 22px;
+      color: #3F1104;
+      margin-bottom: 40px;
+
+      &__score {
+        width: 100%;
+        display: inline-block;
+        border-radius: 14px;
+        line-height: 1;
+        padding: 3%;
+        border: 1px solid #3F1104;
+        font-size: 30px;
+      }
+    }
+
+    .button {
+      border: none;
+      outline: none;
+      background: url(/assets/img/bg_btn-calendar.png) no-repeat center center / 100% 100%;
+      font-family: $SVN;
+      color: #FFE5B9;
+      padding: 2% 4%;
+    }
+  }
+
+  &__close {
+    outline: none;
+    border: none;
+    background: transparent;
+    position: absolute;
+    right: 6%;
+    top: 10%;
   }
 }
