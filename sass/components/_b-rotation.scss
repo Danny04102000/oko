@@ -1,15 +1,68 @@
 .b-rotation {
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10%;
+    padding: 0 8% 10%;
     &__title {
-        
+        position: relative;
+        transform: translateY(35%);
+        width: 60%;
+        z-index: 2;
+        padding: 0 8%;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 11%;
+            left: -10%;
+            width: 33%;
+            height: 95%;
+            background: url(/assets/img/img_decor_rotation_01.png) no-repeat center;
+            background-size: contain;
+            animation: scaleAnim 1.5s infinite;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 10%;
+            right: -8%;
+            width: 33%;
+            height: 95%;
+            background: url(/assets/img/img_decor_rotation_02.png) no-repeat center;
+            background-size: contain;
+            animation: scaleAnim 1.5s infinite;
+        }
     }
     &__content {
         position: relative;
         z-index: 1;
+        @include  media-up(sp) {
+            &::before {
+                content: "";
+                position: absolute;
+                top: -10%;
+                left: -12%;
+                width: 49%;
+                height: 78%;
+                background: url(/assets/img/img_decor_rotation_03.png) no-repeat center;
+                background-size: contain;
+                animation: scaleAnim 2s infinite;
+                z-index: -1;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -19%;
+                right: -12%;
+                width: 40%;
+                height: 59%;
+                background: url(/assets/img/img_decor_rotation_04.png) no-repeat center;
+                background-size: contain;
+                animation: scaleAnim 2s infinite;
+                z-index: -1;
+            }
+        }
     }
 
     &__footer {
@@ -17,5 +70,8 @@
         position: absolute;
         bottom: 0;
         left: 0;
+    }
+    @include media-down(sp) {
+        padding: 0 0 10%;
     }
 }
