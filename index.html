@@ -213,140 +213,1005 @@
       </section>
 
 
-      <!-- <section class="sec-cmn">
+      <section class="sec-cmn">
         <div class="inner">
           <div class="b-calendar">
-            <div class="b-calendar__board">
-              <p class="time">Thời gian cược điểm: <br />
-                13:00 chiều thứ 5 - 13:00 chiều thứ 6 (hàng tuần)
-              </p>
-              <p class="attention">*Ngoài thời gian quy định trên, các hành động thách đấu sẽ k được ghi nhận</p>
+            <div class="b-calendar__header">
+              <p class="time">Thời gian cược điểm:<br>
+                13:00 chiều thứ 5 - 13:00 chiều thứ 6 (hàng tuần)</p>
+              <p class="notice">*Ngoài thời gian quy định trên, các hành động thách đấu sẽ không được ghi nhận</p>
             </div>
-            <div class="b-calendar__tab">
-              <ul class="b-calendar__listTab">
+            <div class="b-calendar__content">
+              <ul class="tabs jsTabs">
                 <li class="active">Beginner</li>
                 <li>Elementary</li>
                 <li>Intermediate</li>
               </ul>
-              <ul class="b-calendar__box">
-                <div class="b-calendar__wrap">
-                  <ul class="b-calendar__ttl b-calendar__ttl--1">
-                    <li>STT</li>
-                    <li>Ngày</li>
-                    <li>Khung giờ</li>
-                    <li>Chủ đề</li>
-                  </ul>
-                  <ul class="b-calendar__ttl b-calendar__ttl--2">
-                    <li>Tên người 1</li>
-                    <li>Điểm</li>
-                    <li>Tên người 2</li>
-                  </ul>
+              <div class="jsTabContents">
+                <div class="scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Ngày</th>
+                        <th>Khung giờ</th>
+                        <th>Chủ đề</th>
+                        <th class="line">
+                          /
+                        </th>
+                        <th>Người chơi 1</th>
+                        <th>Điểm</th>
+                        <th>Người chơi 2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="first">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="second">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="third">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <ul class="b-calendar__contents">
-                  <li>
-                    <ul class="b-calendar__item b-calendar__item--first">
-                      <li>1.</li>
-                      <li>10/6</li>
-                      <li>15pm</li>
-                      <li class="topic">Summer<br />Adventure</li>
-                    </ul>
-                    <ul class="b-calendar__item2 b-calendar__item--first">
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HeHe</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/icon_star.svg" alt="HeHe" class="star">
-                        <span>900</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HaHa</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="b-calendar__item b-calendar__item--second">
-                      <li>1.</li>
-                      <li>10/6</li>
-                      <li>15pm</li>
-                      <li class="topic">Summer<br />Adventure</li>
-                    </ul>
-                    <ul class="b-calendar__item2 b-calendar__item--second">
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HeHe</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/icon_star.svg" alt="HeHe" class="star">
-                        <span>900</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HaHa</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="b-calendar__item b-calendar__item--third">
-                      <li>1.</li>
-                      <li>10/6</li>
-                      <li>15pm</li>
-                      <li class="topic">Summer<br />Adventure</li>
-                    </ul>
-                    <ul class="b-calendar__item2 b-calendar__item--third">
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HeHe</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/icon_star.svg" alt="HeHe" class="star">
-                        <span>900</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HaHa</span>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="b-calendar__item">
-                      <li>1.</li>
-                      <li>10/6</li>
-                      <li>15pm</li>
-                      <li class="topic">Summer<br />Adventure</li>
-                    </ul>
-                    <ul class="b-calendar__item2">
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HeHe</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/icon_star.svg" alt="HeHe" class="star">
-                        <span>900</span>
-                      </li>
-                      <li>
-                        <img src="/assets/img/img_avatar.png" alt="HeHe" class="avatar">
-                        <span>HaHa</span>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-                <div class="b-calendar__more">
-                  <button class="jsMore">
-                    <img src="/assets/img/icon_more.png" alt="More">
-                  </button>
+                <div class="scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Ngày</th>
+                        <th>Khung giờ</th>
+                        <th>Chủ đề</th>
+                        <th class="line">
+                          /
+                        </th>
+                        <th>Người chơi 1</th>
+                        <th>Điểm</th>
+                        <th>Người chơi 2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="first">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="second">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="third">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
+                <div class="scroll">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>Ngày</th>
+                        <th>Khung giờ</th>
+                        <th>Chủ đề</th>
+                        <th class="line">
+                          /
+                        </th>
+                        <th>Người chơi 1</th>
+                        <th>Điểm</th>
+                        <th>Người chơi 2</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="first">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="second">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="third">
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="button">
+                          <button>
+                            <span>THÁCH<br>ĐẤU</span>
+                          </button>
+                        </td>
+                        <td>10/6</td>
+                        <td>15pm</td>
+                        <td class="topic">Summer<br>
+                          Adventure</td>
+                        <th class="line">
+                          /
+                        </th>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HeHe">
+                            </div>
+                            <p>HeHe</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="point">
+                              <img src="/assets/img/icon_star.svg" alt="Star">
+                            </div>
+                            <p>900</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="flex">
+                            <div class="avatar">
+                              <img src="/assets/img/img_avatar.png" alt="HaHa">
+                            </div>
+                            <p>HaHa</p>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
 
-              </ul>
             </div>
-            <div class="b-calendar__button">
-              <button>
-                THÁCH ĐẤU
+            <div class="b-calendar__footer">
+              <img src="/assets/img/bg_calendar-footer.png" alt="Calendar Footer">
+              <button class="b-calendar__more">
+                <img src="/assets/img/icon_more.png" alt="More">
               </button>
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </section> -->
       <section class="sec-cmn sec-ranking">
         <div class="inner">
@@ -379,6 +1244,8 @@
             </div>
           </div>
         </div>
+=======
+>>>>>>> origin/Hallan
       </section>
       <section class="sec-cmn">
         <div class="inner">
@@ -507,6 +1374,31 @@
             <span class="text">Đăng ký ngay</span>
           </a>
         </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-calendar">
+        <div class="modal-calendar__content">
+          <p class="img">
+            <img src="/assets/img/img_modal-calendar.png" alt="Thách Đấu">
+          </p>
+          <p class="ttl">
+            Chủ đề:<br />
+            <span class="ttl__large">KỲ NGHỈ HÈ ĐÁNG NHỚ</span><br />
+            <span class="ttl__time">Thời gian: 15:00pm 10/06/2024</span>
+          </p>
+          <div class="point">
+            <span>Điểm cược:</span>
+            <br>
+            <span class="point__score">330</span>
+          </div>
+          <button class="button">
+            <span>THÁCH ĐẤU</span>
+          </button>
+        </div>
+        <button class="modal-calendar__close close">
+          <img src="/assets/img/icon_close.png" alt="Close">
+        </button>
       </div>
     </div>
   </div>
