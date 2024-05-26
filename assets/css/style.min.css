@@ -1019,6 +1019,11 @@ body {
   left: -15%;
   transform: scaleX(-1) rotate(430deg);
 }
+@media only screen and (max-width: 768px) {
+  .sec-challenge {
+    margin-bottom: 60px;
+  }
+}
 
 .b-adventure {
   width: 81%;
