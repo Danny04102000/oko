@@ -12,6 +12,7 @@
 
 
 .inner {
+  position: relative;
   max-width: 1224px;
   // max-width: 1920px;
   width: 100%;
@@ -46,10 +47,95 @@
 
   &-challenge {
     margin-bottom: 210px;
+
+    .icon {
+      &-tree {
+        &-1 {
+          top: 60%;
+          left: 3%;
+        }
+
+        &-2 {
+          top: 0;
+          right: 3%;
+        }
+
+        &-3 {
+          bottom: -5%;
+          right: 30%;
+        }
+      }
+
+      &-ship-2 {
+        bottom: -1%;
+        right: 10%;
+      }
+
+      &-ship-1 {
+        bottom: -15%;
+        left: 10%;
+      }
+    }
   }
 
   &-ranking {
     margin-bottom: 100px;
+
+    .icon {
+      &-tree {
+        &-1 {
+          bottom: 15%;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &-calendar {
+    .icon {
+      &-tree {
+        &-1 {
+          bottom: -10%;
+          left: 0;
+        }
+      }
+
+      &-ship-2 {
+        bottom: -10%;
+        right: 10%;
+      }
+
+      &-fish {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+
+  &-rotation {
+    .icon {
+      &-tree {
+        &-1 {
+          bottom: 15%;
+          right: 0;
+        }
+      }
+
+      &-ship-1 {
+        bottom: 15%;
+        left: 0;
+      }
+    }
+  }
+
+  &-register {
+    .icon {
+      &-fish {
+        top: 0;
+        left: -15%;
+        transform: scaleX(-1) rotate(430deg);
+      }
+    }
   }
 }
 
@@ -805,6 +891,17 @@
   th:nth-child(1) {
     z-index: 3;
 
+  }
+}
+
+.icon {
+  @include media-up(1024) {
+    pointer-events: none;
+    position: absolute;
+  }
+
+  @include media-down(1023) {
+    display: none;
   }
 }
 
