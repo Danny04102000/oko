@@ -137,6 +137,11 @@
       }
     }
   }
+  @include media-down(sp) {
+    &-challenge {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 
